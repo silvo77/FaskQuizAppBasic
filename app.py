@@ -8,9 +8,15 @@ def load_questions():
     with open('questions.json') as f:
         return json.load(f)
 
+def nl2br(value):
+    """Convert newline characters to <br> tags."""
+    return value.replace('\n', '<br>')
+
+# Register the custom filter
+app.jinja_env.filters['nl2br'] = nl2br
+
 @app.route('/', methods=['GET'])
 def quiz():
-    # Load all questions and pick a random subset.
     questions = load_questions()
     subset_size = 5 if len(questions) >= 5 else len(questions)
     quiz_questions = random.sample(questions, subset_size)
@@ -18,20 +24,30 @@ def quiz():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    # Retrieve the quiz data (the subset of questions used) from a hidden field.
     quiz_data = json.loads(request.form.get('quiz_data'))
     results = []
     doubts = []
+    incorrect_answers = []
+    score = 0
     
-    # Process each question from the quiz data.
     for i, q in enumerate(quiz_data):
         qid = str(q["id"])
-        # Retrieve the user answer; getlist() works for both radio buttons and checkboxes.
         user_answer = request.form.getlist("response_" + qid)
         answer_text = ", ".join(user_answer) if user_answer else "No Answer"
         correct_text = ", ".join(q["correct_answers"])
         
-        # Build a result dictionary with all needed fields.
+        is_correct = set(user_answer) == set(q["correct_answers"])
+        if is_correct:
+            score += 1
+        else:
+            incorrect_answers.append({
+                "number": i + 1,
+                "id": qid,
+                "question": q["question"],
+                "user_answer": answer_text,
+                "correct_answer": correct_text
+            })
+        
         result = {
             "number": i + 1,
             "id": qid,
@@ -41,12 +57,11 @@ def submit():
         }
         results.append(result)
         
-        # Check if the doubt checkbox was marked for this question.
         if request.form.get("doubt_" + qid) is not None:
             doubts.append(result)
     
-    # Pass both full results and the subset with doubts to the results template.
-    return render_template('results.html', results=results, doubts=doubts)
+    total_questions = len(quiz_data)
+    return render_template('results.html', score=score, total_questions=total_questions, incorrect_answers=incorrect_answers, doubts=doubts)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -18,24 +18,35 @@
 <body>
     <h1>Quiz Results</h1>
     
-    <h2>All Questions</h2>
+    <!-- Display Score -->
+    <h2>Your Score: {{ score }} out of {{ total_questions }}</h2>
+    
+    <!-- Incorrectly Answered Questions -->
+    {% if incorrect_answers %}
+    <h2>Incorrectly Answered Questions</h2>
     <table>
         <tr>
             <th>Question Number</th>
             <th>Question ID</th>
+            <th>Question</th>
             <th>My Answer</th>
             <th>Correct Answer</th>
         </tr>
-        {% for r in results %}
+        {% for ia in incorrect_answers %}
         <tr>
-            <td>{{ r.number }}</td>
-            <td>{{ r.id }}</td>
-            <td>{{ r.user_answer }}</td>
-            <td>{{ r.correct_answer }}</td>
+            <td>{{ ia.number }}</td>
+            <td>{{ ia.id }}</td>
+            <td>{{ ia.question | nl2br | safe }}</td>
+            <td>{{ ia.user_answer }}</td>
+            <td>{{ ia.correct_answer }}</td>
         </tr>
         {% endfor %}
     </table>
+    {% else %}
+    <p>Congratulations! You answered all questions correctly.</p>
+    {% endif %}
     
+    <!-- Questions with Doubts -->
     {% if doubts %}
     <h2>Questions with Doubts</h2>
     <table>
@@ -50,7 +61,7 @@
         <tr>
             <td>{{ d.number }}</td>
             <td>{{ d.id }}</td>
-            <td>{{ d.question }}</td>
+            <td>{{ d.question | nl2br | safe }}</td>
             <td>{{ d.user_answer }}</td>
             <td>{{ d.correct_answer }}</td>
         </tr>
@@ -59,7 +70,7 @@
     {% else %}
     <p>No doubts marked.</p>
     {% endif %}
-
+    
     <!-- Start New Quiz Button -->
     <div class="new-quiz">
         <button onclick="window.location.href='/'">Start New Quiz</button>
