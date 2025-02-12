@@ -1,5 +1,0 @@
-Question Number,Question ID,My Answer,Correct Answer,Question
-10,26,A,C,A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes. Which AWS service or tool will meet this requirement?
-25,81,D,C,A company has a set of ecommerce applications. The applications need to be able to send messages to each other. Which AWS service meets this requirement?
-55,65,B,A,A company wants to monitor for misconfigured security groups that are allowing unrestricted access to specific ports. Which AWS service will meet this requirement?
-57,158,B,C,A user wants to securely automate the management and rotation of credentials that are shared between applications while spending the least amount of time on managing tasks. Which AWS service or feature can be used to accomplish this?

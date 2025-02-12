@@ -10,7 +10,7 @@
         th, td {
             padding: 8px;
         }
-        .new-quiz {
+        .new-quiz, .save-results {
             margin-top: 20px;
         }
     </style>
@@ -69,6 +69,16 @@
     </table>
     {% else %}
     <p>No doubts marked.</p>
+    {% endif %}
+    
+    <!-- Save Results Button -->
+    {% if incorrect_answers %}
+    <div class="save-results">
+        <form action="/save_results" method="post">
+            <input type='hidden' name='incorrect_answers' value='{{incorrect_answers}}'>
+            <button type="submit">Save Results</button>
+        </form>
+    </div>
     {% endif %}
     
     <!-- Start New Quiz Button -->

@@ -1,3 +1,4 @@
+import csv
 from flask import Flask, render_template, request
 import json
 import random
@@ -62,6 +63,21 @@ def submit():
     
     total_questions = len(quiz_data)
     return render_template('results.html', score=score, total_questions=total_questions, incorrect_answers=incorrect_answers, doubts=doubts)
+
+@app.route('/save_results', methods=['POST'])
+def save_results():
+    incorrect_answers_string = request.form.get('incorrect_answers')
+    json_acceptable_string = incorrect_answers_string.replace("'", "\"")
+    print(f'incorrect_answers {json_acceptable_string}')
+    incorrect_answers = json.loads(json_acceptable_string)
+    
+    
+    if incorrect_answers:
+        with open('my_errors.csv', 'a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            for answer in incorrect_answers:
+                writer.writerow([answer['number'],answer['id'],answer['user_answer'],answer['correct_answer'],answer['question']])
+    return 'Results saved successfully!'
 
 if __name__ == '__main__':
     app.run(debug=True)
