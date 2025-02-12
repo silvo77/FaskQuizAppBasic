@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+</head>
+<body>
+    <h1>Quiz Responses</h1>
+    <h2>Your Answers</h2>
+    <ul>
+        {% for qid, answer in responses.items() %}
+        <li>
+            Question ID {{ qid }}: Your answer(s): {{ answer }}
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Doubt Flags</h2>
+    <ul>
+        {% for qid, flag in doubts.items() %}
+        <li>
+            Question ID {{ qid }}: Marked Doubt: {{ flag }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
