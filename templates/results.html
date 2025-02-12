@@ -2,24 +2,59 @@
 <html>
 <head>
     <title>Quiz Results</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Quiz Responses</h1>
-    <h2>Your Answers</h2>
-    <ul>
-        {% for qid, answer in responses.items() %}
-        <li>
-            Question ID {{ qid }}: Your answer(s): {{ answer }}
-        </li>
+    <h1>Quiz Results</h1>
+    
+    <h2>All Questions</h2>
+    <table>
+        <tr>
+            <th>Question Number</th>
+            <th>Question ID</th>
+            <th>My Answer</th>
+            <th>Correct Answer</th>
+        </tr>
+        {% for r in results %}
+        <tr>
+            <td>{{ r.number }}</td>
+            <td>{{ r.id }}</td>
+            <td>{{ r.user_answer }}</td>
+            <td>{{ r.correct_answer }}</td>
+        </tr>
         {% endfor %}
-    </ul>
-    <h2>Doubt Flags</h2>
-    <ul>
-        {% for qid, flag in doubts.items() %}
-        <li>
-            Question ID {{ qid }}: Marked Doubt: {{ flag }}
-        </li>
+    </table>
+    
+    {% if doubts %}
+    <h2>Questions with Doubts</h2>
+    <table>
+        <tr>
+            <th>Question Number</th>
+            <th>Question ID</th>
+            <th>Question</th>
+            <th>My Answer</th>
+            <th>Correct Answer</th>
+        </tr>
+        {% for d in doubts %}
+        <tr>
+            <td>{{ d.number }}</td>
+            <td>{{ d.id }}</td>
+            <td>{{ d.question }}</td>
+            <td>{{ d.user_answer }}</td>
+            <td>{{ d.correct_answer }}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
+    {% else %}
+    <p>No doubts marked.</p>
+    {% endif %}
 </body>
 </html>

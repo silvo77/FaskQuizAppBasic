@@ -10,7 +10,7 @@ def load_questions():
 
 @app.route('/', methods=['GET'])
 def quiz():
-    # Load questions and select a random subset
+    # Load all questions and pick a random subset.
     questions = load_questions()
     subset_size = 5 if len(questions) >= 5 else len(questions)
     quiz_questions = random.sample(questions, subset_size)
@@ -18,24 +18,35 @@ def quiz():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    responses = {}
-    doubts = {}
+    # Retrieve the quiz data (the subset of questions used) from a hidden field.
+    quiz_data = json.loads(request.form.get('quiz_data'))
+    results = []
+    doubts = []
     
-    # Process responses for each form field.
-    # For single-choice responses the field is named "response_<question_id>"
-    # For multiple-choice, the field name is "response_<question_id>[]"
-    for key in request.form:
-        if key.startswith('response_'):
-            # Extract the question id by stripping the prefix
-            qid = key.split('response_')[1]
-            # getlist() works for both single (as a list with one item) and multiple selections
-            responses[qid] = request.form.getlist(key)
-        elif key.startswith('doubt_'):
-            qid = key.split('doubt_')[1]
-            doubts[qid] = True
-
-    # Render a simple results page with the collected responses.
-    return render_template('results.html', responses=responses, doubts=doubts)
+    # Process each question from the quiz data.
+    for i, q in enumerate(quiz_data):
+        qid = str(q["id"])
+        # Retrieve the user answer; getlist() works for both radio buttons and checkboxes.
+        user_answer = request.form.getlist("response_" + qid)
+        answer_text = ", ".join(user_answer) if user_answer else "No Answer"
+        correct_text = ", ".join(q["correct_answers"])
+        
+        # Build a result dictionary with all needed fields.
+        result = {
+            "number": i + 1,
+            "id": qid,
+            "question": q["question"],
+            "user_answer": answer_text,
+            "correct_answer": correct_text
+        }
+        results.append(result)
+        
+        # Check if the doubt checkbox was marked for this question.
+        if request.form.get("doubt_" + qid) is not None:
+            doubts.append(result)
+    
+    # Pass both full results and the subset with doubts to the results template.
+    return render_template('results.html', results=results, doubts=doubts)
 
 if __name__ == '__main__':
     app.run(debug=True)

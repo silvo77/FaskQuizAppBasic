@@ -3,14 +3,10 @@
 <head>
     <title>Quiz</title>
     <script>
-        // Toggle function to show/hide the correct answer for a given question id.
+        // Function to toggle showing/hiding the correct answer.
         function toggleAnswer(id) {
             var answerDiv = document.getElementById("answer-" + id);
-            if (answerDiv.style.display === "none") {
-                answerDiv.style.display = "block";
-            } else {
-                answerDiv.style.display = "none";
-            }
+            answerDiv.style.display = (answerDiv.style.display === "none") ? "block" : "none";
         }
     </script>
     <style>
@@ -22,44 +18,44 @@
 <body>
     <h1>Quiz</h1>
     <form action="/submit" method="post">
-    {% for q in questions %}
-    <div class="question">
-        <!-- Display question number and unique ID -->
-        <h2>Question {{ loop.index }} (ID: {{ q.id }})</h2>
-        <p>{{ q.question | safe }}</p>
-        <ul>
-            {% if q.type == "single" %}
-                {% for key, option in q.options.items() %}
-                <li>
-                    <input type="radio" name="response_{{ q.id }}" value="{{ key }}" id="q{{ q.id }}_{{ key }}">
-                    <label for="q{{ q.id }}_{{ key }}"><strong>{{ key }}:</strong> {{ option }}</label>
-                </li>
-                {% endfor %}
-            {% elif q.type == "multiple" %}
-                {% for key, option in q.options.items() %}
-                <li>
-                    <!-- For multiple-choice, the input name includes [] to allow multiple selections -->
-                    <input type="checkbox" name="response_{{ q.id }}[]" value="{{ key }}" id="q{{ q.id }}_{{ key }}">
-                    <label for="q{{ q.id }}_{{ key }}"><strong>{{ key }}:</strong> {{ option }}</label>
-                </li>
-                {% endfor %}
-            {% endif %}
-        </ul>
-        
-        <!-- Button to toggle correct answer -->
-        <button type="button" onclick="toggleAnswer({{ q.id }})">Show/Hide Correct Answer</button>
-        <div id="answer-{{ q.id }}" style="display: none;">
-            <p><strong>Correct Answer(s):</strong> {{ q.correct_answers }}</p>
+        {% for q in questions %}
+        <div class="question">
+            <h2>Question {{ loop.index }} (ID: {{ q.id }})</h2>
+            <p>{{ q.question | safe }}</p>
+            <ul>
+                {% if q.type == "single" %}
+                    {% for key, option in q.options.items() %}
+                    <li>
+                        <input type="radio" name="response_{{ q.id }}" value="{{ key }}" id="q{{ q.id }}_{{ key }}">
+                        <label for="q{{ q.id }}_{{ key }}"><strong>{{ key }}:</strong> {{ option }}</label>
+                    </li>
+                    {% endfor %}
+                {% elif q.type == "multiple" %}
+                    {% for key, option in q.options.items() %}
+                    <li>
+                        <input type="checkbox" name="response_{{ q.id }}" value="{{ key }}" id="q{{ q.id }}_{{ key }}">
+                        <label for="q{{ q.id }}_{{ key }}"><strong>{{ key }}:</strong> {{ option }}</label>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+            
+            <!-- Button to toggle the correct answer display -->
+            <button type="button" onclick="toggleAnswer({{ q.id }})">Show/Hide Correct Answer</button>
+            <div id="answer-{{ q.id }}" style="display: none;">
+                <p><strong>Correct Answer(s):</strong> {{ q.correct_answers }}</p>
+            </div>
+            
+            <!-- Checkbox to mark doubts -->
+            <p>
+                <input type="checkbox" name="doubt_{{ q.id }}" id="doubt-{{ q.id }}">
+                <label for="doubt-{{ q.id }}">Mark if I have doubts</label>
+            </p>
         </div>
-        
-        <!-- Checkbox to mark doubts -->
-        <p>
-            <input type="checkbox" name="doubt_{{ q.id }}" id="doubt-{{ q.id }}">
-            <label for="doubt-{{ q.id }}">Mark if I have doubts</label>
-        </p>
-    </div>
-    <hr>
-    {% endfor %}
+        <hr>
+        {% endfor %}
+        <!-- Hidden field with quiz data (use single quotes) -->
+        <input type='hidden' name='quiz_data' value='{{ questions|tojson | safe }}'>
         <input type="submit" value="Submit Quiz">
     </form>
 </body>
