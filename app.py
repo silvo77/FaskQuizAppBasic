@@ -1,5 +1,5 @@
 import csv
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect,url_for
 import json
 import random
 import ast
@@ -17,12 +17,33 @@ def nl2br(value):
 # Register the custom filter
 app.jinja_env.filters['nl2br'] = nl2br
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
+def configure_quiz():
+    if request.method == 'POST':
+        max_questions = int(request.form.get('max_questions'))
+        selection_type = request.form.get('selection_type')
+        search_text = request.form.get('search_text', '').lower()
+        return redirect(url_for('quiz', max_questions=max_questions, selection_type=selection_type, search_text=search_text))
+    return render_template('index.html')
+
+
+@app.route('/quiz', methods=['GET'])
 def quiz():
     questions = load_questions()
-    subset_size = 65 if len(questions) >= 5 else len(questions)
-    quiz_questions = random.sample(questions, subset_size)
+    max_questions = int(request.args.get('max_questions', 5))
+    selection_type = request.args.get('selection_type', 'random')
+    search_text = request.args.get('search_text', '').lower()
+
+    if selection_type == 'text' and search_text:
+        filtered_questions = [q for q in questions if search_text in q['question'].lower() or any(search_text in ans.lower() for ans in q['options'].values())]
+    else:
+        filtered_questions = questions
+
+    subset_size = min(max_questions, len(filtered_questions))
+    quiz_questions = random.sample(filtered_questions, subset_size) if subset_size > 0 else []
+
     return render_template('quiz.html', questions=quiz_questions)
+
 
 @app.route('/submit', methods=['POST'])
 def submit():

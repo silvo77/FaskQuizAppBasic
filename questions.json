@@ -3469,10 +3469,10 @@
             "D": "Launch"
         },
         "correct_answers": [
-            "A"
+            "B"
         ],
         "type": "single",
-        "explanation": " The Envision phase of the cloud transformation journey is where the company defines its vision, business drivers, and desired outcomes for the cloud adoption. The company also identifies its capability gaps by using the AWS Cloud Adoption Framework (AWS CAF) perspectives, which are business, people, governance, platform, security, and operations2."
+        "explanation": "The Align phase focuses on understanding the current state of the organization and identifying capability gaps in relation to the desired future state in the cloud. It involves assessing the organization's readiness for cloud adoption, evaluating existing processes, skills, and technologies, and identifying areas that need improvement or additional capabilities. The AWS CAF perspectives, such as Business, People, Governance, and Platform, are used to assess and identify these capability gaps and define the required actions to address them."
     },
     {
         "id": 239,

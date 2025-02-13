@@ -11,3 +11,8 @@ Question ID,My Answer,Correct Answer,Question
 26,A,C,"A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes. Which AWS service or tool will meet this requirement?"
 195,A,D,A company has migrated its workloads to AWS. The company wants to adopt AWS at scale and operate more efficiently and securely. Which AWS service or framework should the company use for operational support?
 211,D,A,A company needs to search for text in documents that are stored in Amazon S3. Which AWS service will meet these requirements?
+6,No Answer,C,Which option is a perspective that includes foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)?
+137,A,"C, D",Which options are AWS Cloud Adoption Framework (AWS CAF) security perspective capabilities? (Choose two.)
+45,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
+196,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
+216,"D, E","A, C","A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which tasks should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)"
