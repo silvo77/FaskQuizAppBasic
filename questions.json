@@ -2424,5 +2424,1482 @@
         ],
         "type": "single",
         "id": 170
+    },
+    {
+        "id": 171,
+        "question": "A company wants to make an upfront commitment for continued use of its production Amazon EC2 instances in exchange for a reduced overall cost. Which pricing options meet these requirements with the LOWEST cost? (Select TWO.)",
+        "options": {
+            "A": "Spot Instances",
+            "B": "On-Demand Instances",
+            "C": "Reserved Instances",
+            "D": "Savings Plans",
+            "E": "Dedicated Hosts"
+        },
+        "correct_answers": [
+            "C",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " Reserved Instances (RIs) are a pricing model that allows you to reserve EC2 instances for a specified period of time (one or three years) and receive a significant discount compared to On-Demand pricing. RIs are suitable for workloads that have predictable usage patterns and require a long-term commitment. You can choose between three payment options: All Upfront, Partial Upfront, or No Upfront. The more you pay upfront, the greater the discount1. Savings Plans are a flexible pricing model that can help you reduce your EC2 costs by up to 72% compared to On-Demand pricing, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a one or three year term. Savings Plans apply to usage across EC2, AWS Lambda, and AWS Fargate. You can choose between two types of Savings Plans: Compute Savings Plans and EC2 Instance Savings Plans. Compute Savings Plans offer the most flexibility and apply to any instance family, size, OS, tenancy, or region. EC2 Instance Savings Plans offer the highest discount and apply to a specific instance family within a region2. Spot Instances are a pricing model that allows you to bid for unused EC2 capacity in the AWS cloud and are available at a discount of up to 90% compared to On- Demand pricing. Spot Instances are suitable for fault-tolerant or stateless workloads that can run on heterogeneous hardware and have flexible start and end times. However, Spot Instances are not guaranteed and can be interrupted by AWS at any time if the demand for capacity increases or your bid price is lower than the current Spot price3. On-Demand Instances are a pricing model that allows you to pay for compute capacity by the hour or second with no long-term commitments. On-Demand Instances are suitable for short-term, spiky, or unpredictable workloads that cannot be interrupted, or for applications that are being developed or tested on EC2 for the first time. However, On-Demand Instances are the most expensive option among the four pricing models4. Dedicated Hosts are physical EC2 servers fully dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server- bound software licenses, such as Windows Server, SQL Server, and SUSE Linux Enterprise Server. Dedicated Hosts can be purchased On-Demand or as part of Savings Plans. Dedicated Hosts are suitable for workloads that need to run on dedicated physical servers or have strict licensing requirements. However, Dedicated Hosts are not the lowest cost option among the four pricing models."
+    },
+    {
+        "id": 172,
+        "question": "Which AWS service is a cloud security posture management (CSPM) service that aggregates alerts from various AWS services and partner products in a standardized format?",
+        "options": {
+            "A": "AWS Security Hub",
+            "B": "AWS Trusted Advisor",
+            "C": "Amazon EventBndge",
+            "D": "Amazon GuardDuty"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Security Hub is a cloud security posture management (CSPM) service that performs security best practice checks, aggregates alerts, and enables automated remediation. Security Hub collects findings from the security services enabled across your AWS accounts, such as intrusion detection findings from Amazon GuardDuty, vulnerability scans from Amazon Inspector, and sensitive data identification findings from Amazon Macie. Security Hub also collects findings from partner security products using a standardized AWS Security Finding Format, eliminating the need for time-consuming data parsing and normalization efforts. Customers can designate an administrator account that can access all findings across their accounts. References: AWS Security Hub Overview, AWS Security Hub FAQs"
+    },
+    {
+        "id": 173,
+        "question": "A company that has multiple business units wants to centrally manage and govern its AWS Cloud environments. The company wants to automate the creation of AWS accounts, apply service control policies (SCPs), and simplify billing processes. Which AWS service or tool should the company use to meet these requirements?",
+        "options": {
+            "A": "AWS Organizations",
+            "B": "Cost Explorer",
+            "C": "AWS Budgets",
+            "D": "AWS Trusted Advisor"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Organizations is an AWS service that enables you to centrally manage and govern your AWS Cloud environments across multiple business units. AWS Organizations allows you to create an organization that consists of AWS accounts that you create or invite to join. You can group your accounts into organizational units (OUs) and apply service control policies (SCPs) to them. SCPs are a type of policy that specify the maximum permissions for the accounts in your organization, and can help you enforce compliance and security requirements. AWS Organizations also simplifies billing processes by enabling you to consolidate and pay for all member accounts with a single payment method. You can also use AWS Organizations to automate the creation of AWS accounts by using APIs or AWS CloudFormation templates. References: What is AWS Organizations?, Policy-Based Management - AWS Organizations"
+    },
+    {
+        "id": 174,
+        "question": "What is a benefit of using AWS serverless computing?",
+        "options": {
+            "A": "Application deployment and management are not required",
+            "B": "Application security will be fully managed by AWS",
+            "C": "Monitoring and logging are not needed",
+            "D": "Management of infrastructure is offloaded to AWS"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS serverless computing is a way of building and running applications without thinking about servers. AWS manages the infrastructure for you, so you don’t have to provision, scale, patch, or monitor servers. You only pay for the compute time you consume, and you can focus on your application logic instead of managing servers12. References: Serverless Computing – Amazon Web Services, AWS Serverless Computing, Benefits, Architecture and Use-cases - XenonStack"
+    },
+    {
+        "id": 175,
+        "question": "A company is planning to migrate to the AWS Cloud and wants to become more responsive to customer inquiries and feedback. The company wants to focus on organizational transformation. A company wants to give its customers the ability to view specific data that is hosted in Amazon S3 buckets. The company wants to keep control over the full datasets that the company shares with the customers. Which S3 feature will meet these requirements?",
+        "options": {
+            "A": "S3 Storage Lens",
+            "B": "S3 Cross-Region Replication (CRR)",
+            "C": "S3 Versioning",
+            "D": "S3 Access Points"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " S3 Access Points are a feature of Amazon S3 that allows you to easily manage access to specific data that is hosted in S3 buckets. S3 Access Points are unique hostnames that customers can use to access data in S3 buckets. You can create multiple access points for a single bucket, each with its own name and permissions. You can use S3 Access Points to provide different levels of access to different groups of customers, such as read-only or write-only access. You can also use S3 Access Points to enforce encryption or logging requirements for specific data. S3 Access Points help you keep control over the full datasets that you share with your customers, while simplifying the access management and improving the performance and scalability of your applications."
+    },
+    {
+        "id": 176,
+        "question": "A cloud practitioner needs to obtain AWS compliance reports before migrating an environment to the AWS Cloud How can these reports be generated?",
+        "options": {
+            "A": "Contact the AWS Compliance team",
+            "B": "Download the reports from AWS Artifact",
+            "C": "Open a case with AWS Support",
+            "D": "Generate the reports with Amazon Made"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Artifact is a service that provides on-demand access to security and compliance reports from AWS and Independent Software Vendors (ISVs) who sell their products on AWS Marketplace. You can use AWS Artifact to download auditor-issued reports, certifications, accreditations, and other third-party attestations of AWS compliance with various standards and regulations, such as PCI-DSS, HIPAA, FedRAMP, GDPR, and more1234. You can also use AWS Artifact to review, accept, and manage your agreements with AWS and apply them to current and future accounts within your organization2. References: 1: Cloud Compliance - Amazon Web Services (AWS), 2: Security Compliance Management - AWS Artifact - AWS, 3: AWS Compliance Contact Us - Amazon Web Services, 4: AWS SECURITY AND COMPLIANCE QUICK REFERENCE GUIDE"
+    },
+    {
+        "id": 177,
+        "question": "Which AWS service or feature offers security for a VPC by acting as a firewall to control traffic in and out of subnets?",
+        "options": {
+            "A": "AWS Security Hub",
+            "B": "Security groups",
+            "C": "Network ACL",
+            "D": "AWSWAF"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " A network access control list (network ACL) is a feature that acts as a firewall for controlling traffic in and out of one or more subnets in a virtual private cloud (VPC). AWS Security Hub is a service that provides a comprehensive view of the security posture of AWS accounts and resources. Security groups are features that act as firewalls for controlling traffic at the instance level. AWS WAF is a web application firewall that helps protect web applications from common web exploits."
+    },
+    {
+        "id": 178,
+        "question": "A company processes personally identifiable information (Pll) and must keep data in the country where it was generated. The company wants to use Amazon EC2 instances for these workloads. Which AWS service will meet these requirements?",
+        "options": {
+            "A": "AWS Outposts",
+            "B": "AWS Storage Gateway",
+            "C": "AWS DataSync",
+            "D": "AWS OpsWorks"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Outposts is an AWS service that extends AWS infrastructure, services, APIs, and tools to virtually any datacenter, co-location space, or on-premises facility. AWS Outposts enables you to run Amazon EC2 instances and other AWS services locally, while maintaining a consistent and seamless connection to the AWS Cloud. AWS Outposts is ideal for workloads that require low latency, local data processing, or data residency. By using AWS Outposts, the company can process personally identifiable information (PII) and keep data in the country where it was generated, while leveraging the benefits of AWS"
+    },
+    {
+        "id": 179,
+        "question": "A company is storing sensitive customer data in an Amazon S3 bucket. The company wants to protect the data from accidental deletion or overwriting. Which S3 feature should the company use to meet these requirements?",
+        "options": {
+            "A": "S3 Lifecycle rules",
+            "B": "S3 Versioning",
+            "C": "S3 bucket policies",
+            "D": "S3 server-side encryption"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " S3 Versioning is a feature that allows you to keep multiple versions of an object in the same bucket. You can use S3 Versioning to protect your data from accidental deletion or overwriting by enabling it on a bucket or a specific object. S3 Versioning also allows you to restore previous versions of an object if needed. S3 Lifecycle rules are used to automate the transition of objects between storage classes or to expire objects after a certain period of time. S3 bucket policies are used to control access to the objects in a bucket. S3 server-side encryption is used to encrypt the data at rest in S3. References: S3 Versioning, S3 Lifecycle rules, S3 bucket policies, S3 server-side encryption"
+    },
+    {
+        "id": 180,
+        "question": "A company needs a fully managed file server that natively supports Microsoft workloads and file systems The file server must also support the SMB protocol. Which AWS service should the company use to meet these requirements?",
+        "options": {
+            "A": "Amazon Elastic File System (Amazon EFS)",
+            "B": "Amazon FSx for Lustre",
+            "C": "Amazon FSx for Windows File Server",
+            "D": "Amazon Elastic Block Store (Amazon EBS)"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " Amazon FSx for Windows File Server is a fully managed file server that supports Microsoft workloads and file systems, including the SMB protocol. It provides features such as user quotas, end-user file restore, and Microsoft Active Directory integration. Amazon EFS is a fully managed file system that supports the NFS protocol, not SMB. Amazon FSx for Lustre is a fully managed file system that supports high- performance computing workloads, not Microsoft workloads. Amazon EBS is a block storage service that does not provide a file system or SMB support. References: Amazon FSx for Windows File Server, Amazon FSx for Lustre, Amazon EFS, Amazon EBS"
+    },
+    {
+        "id": 181,
+        "question": "A team of researchers is going to collect data at remote locations around the world Many locations do not have internet connectivity. The team needs to capture the data in the field, and transfer it to the AWS Cloud later Which AWS service will support these requirements?",
+        "options": {
+            "A": "AWS Outposts",
+            "B": "AWS Transfer Family",
+            "C": "AWS Snow Family",
+            "D": "AWS Migration Hub"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS Snow Family is a group of devices that transport data in and out of AWS. AWS Snow Family devices are physical devices that can transfer up to exabytes of data. One exabyte is 1 000 000 000 000 megabytes. AWS Snow Family devices are designed for use in remote locations where internet connectivity is limited or unavailable. You can use these devices to collect and process data at the edge, and then ship them back to AWS for data upload. AWS Snow Family consists of three types of devices: AWS Snowcone, AWS Snowball, and AWS Snowmobile1234. References: 1: Edge Computing Devices, Secure Data Transfer - AWS Snow Family - AWS, 2: AWS Snow Family Documentation, 3: AWS Snow Family - W3Schools, 4: AWS Snow Family: Data Storage, Migration, and Computation"
+    },
+    {
+        "id": 182,
+        "question": "A company wants to launch its web application in a second AWS Region. The company needs to determine which services must be regionally configured for this launch. Which AWS services can be configured at the Region level? (Select TWO.)",
+        "options": {
+            "A": "Amazon EC2",
+            "B": "Amazon Route 53",
+            "C": "Amazon CloudFront",
+            "D": "AWS WAF",
+            "E": "Amazon DynamoDB"
+        },
+        "correct_answers": [
+            "B",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " Amazon Route 53 and AWS WAF are AWS services that can be configured at the Region level. Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service that lets you register domain names, route traffic to resources, and check the health of your resources. AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. Amazon EC2, Amazon CloudFront, and Amazon DynamoDB are AWS services that can be configured at the global level or the Availability Zone level ."
+    },
+    {
+        "id": 183,
+        "question": "Which AWS services can be used to store files? (Select TWO.)",
+        "options": {
+            "A": "Amazon S3",
+            "B": "AWS Lambda",
+            "C": "Amazon Elastic Block Store (Amazon EBS)",
+            "D": "Amazon SageMaker",
+            "E": "AWS Storage Gateway"
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " Amazon S3 and Amazon EBS are two AWS services that can be used to store files . Amazon S3 is an object storage service that offers high scalability, durability, availability, and performance. Amazon EBS is a block storage service that provides persistent and low-latency storage volumes for Amazon EC2 instances. AWS Lambda, Amazon SageMaker, and AWS Storage Gateway are other AWS services that have different purposes, such as serverless computing, machine learning, and hybrid cloud storage ."
+    },
+    {
+        "id": 184,
+        "question": "A company is running its application in the AWS Cloud. The company wants to periodically review its AWS account for cost optimization opportunities. Which AWS service or tool can the company use to meet these requirements?",
+        "options": {
+            "A": "AWS Cost Explorer",
+            "B": "AWS Trusted Advisor",
+            "C": "AWS Pricing Calculator",
+            "D": "AWS Budgets"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Cost Explorer is an AWS service or tool that the company can use to periodically review its AWS account for cost optimization opportunities. AWS Cost Explorer is a tool that enables the company to visualize, understand, and manage their AWS costs and usage over time. The company can use AWS Cost Explorer to access interactive graphs and tables that show the breakdown of their costs and usage by service, region, account, tag, and more. The company can also use AWS Cost Explorer to forecast their future costs, identify trends and anomalies, and discover potential savings by using Reserved Instances or Savings Plans."
+    },
+    {
+        "id": 185,
+        "question": "A company has a physical tape library to store data backups. The tape library is running out of space. The company needs to extend the tape library's capacity to the AWS Cloud. Which AWS service should the company use to meet this requirement?",
+        "options": {
+            "A": "Amazon Elastic File System (Amazon EFS)",
+            "B": "Amazon Elastic Block Store (Amazon EBS)",
+            "C": "Amazon S3",
+            "D": "AWS Storage Gateway"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Storage Gateway is a hybrid cloud storage service that provides on- premises access to virtually unlimited cloud storage. You can use AWS Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. One of these use cases is tape-based backup, which allows you to store data backups on virtual tapes in the AWS Cloud. You can use the Tape Gateway feature of AWS Storage Gateway to extend your existing physical tape library to the AWS Cloud. Tape Gateway provides a virtual tape infrastructure that scales seamlessly with your backup needs and eliminates the operational burden of provisioning, scaling, and maintaining a physical tape infrastructure123. References: 1: Cloud Storage Appliances, Hybrid Device - AWS Storage Gateway - AWS, 2: AWS Storage Gateway Documentation, 3: AWS Storage Gateway Features | Amazon Web Services"
+    },
+    {
+        "id": 186,
+        "question": "Which AWS service provides encryption at rest for Amazon RDS and for Amazon Elastic Block Store (Amazon EBS) volumes?",
+        "options": {
+            "A": "AWS Lambda",
+            "B": "AWS Key Management Service (AWS KMS)",
+            "C": "AWSWAF",
+            "D": "Amazon Rekognition"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Key Management Service (AWS KMS) is a managed service that enables you to easily encrypt your data. AWS KMS provides you with centralized control of the encryption keys used to protect your data. You can use AWS KMS to encrypt data in Amazon RDS and Amazon EBS volumes12"
+    },
+    {
+        "id": 187,
+        "question": "Which AWS services or features give users the ability to create a network connection between two VPCs? (Select TWO.)",
+        "options": {
+            "A": "VPC endpoints",
+            "B": "Amazon Route 53",
+            "C": "VPC peering",
+            "D": "AWS Direct Connect",
+            "E": "AWS Transit Gateway"
+        },
+        "correct_answers": [
+            "C",
+            "E"
+        ],
+        "type": "multiple",
+        "explanation": " VPC peering and AWS Transit Gateway are two AWS services or features that give users the ability to create a network connection between two VPCs. VPC peering is a networking connection between two VPCs that enables you to route traffic between them privately. You can create a VPC peering connection between your own VPCs, with a VPC in another AWS account, or with a VPC in a different AWS Region. Traffic between peered VPCs never traverses the public internet. VPC peering does not support transitive peering relationships, which means that if VPC A is peered with VPC B, and VPC B is peered with VPC C, then VPC A and VPC C are not automatically peered789. AWS Transit Gateway is a networking service that acts as a regional router for your VPCs and on- premises networks. You can attach up to 5,000 VPCs and VPN connections to a single transit gateway and route traffic between them. AWS Transit Gateway simplifies the management and scalability of your network architecture, as you only need to create and manage a single connection from the central transit gateway to each connected network. AWS Transit Gateway supports transitive routing, which means that any network that is attached to the transit gateway can communicate with any other network that is attached to the same transit gateway . References: 7: VPC peering - Amazon Virtual Private Cloud, 8: Connect VPCs using VPC peering - Amazon Virtual Private Cloud, 9: Amazon VPC-to-Amazon VPC connectivity options - Amazon Virtual Private Cloud, : [AWS Transit Gateway - Amazon Web Services], : [Connect VPCs using AWS Transit Gateway - Amazon Virtual Private Cloud], : [AWS Transit Gateway: Simplify Your Network Architecture]"
+    },
+    {
+        "id": 188,
+        "question": "Elasticity in the AWS Cloud refers to which of the following? (Select TWO.)",
+        "options": {
+            "A": "How quickly an Amazon EC2 instance can be restarted",
+            "B": "The ability to rightsized resources as demand shifts",
+            "C": "The maximum amount of RAM an Amazon EC2 instance can use",
+            "D": "The pay-as-you-go billing model",
+            "E": "How easily resources can be procured when they are needed"
+        },
+        "correct_answers": [
+            "B",
+            "E"
+        ],
+        "type": "multiple",
+        "explanation": " Elasticity in the AWS Cloud refers to the ability to acquire resources as you need them and release resources when you no longer need them. In the cloud, you want to do this automatically1. This means that you can rightsized resources as demand shifts, and you can easily procure resources when they are needed. Elasticity is not related to how quickly an Amazon EC2 instance can be restarted, the maximum amount of RAM an Amazon EC2 instance can use, or the pay-as- you-go billing model. These are aspects of scalability, performance, and cost, respectively2. For more information on elasticity, you can refer to the following sources: ? Elasticity - AWS Well-Architected Framework ? Elastic - Reactive Systems on AWS ? What is the difference between scalability and elasticity?"
+    },
+    {
+        "id": 189,
+        "question": "A developer wants to deploy an application quickly on AWS without manually creating the required resources. Which AWS service will meet these requirements?",
+        "options": {
+            "A": "Amazon EC2",
+            "B": "AWS Elastic Beanstalk",
+            "C": "AWS CodeBuild",
+            "D": "Amazon Personalize"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Elastic Beanstalk is a service that allows you to deploy and manage applications on AWS without manually creating and configuring the required resources, such as EC2 instances, load balancers, security groups, databases, and more. AWS Elastic Beanstalk automatically handles the provisioning, scaling, load balancing, health monitoring, and updating of your application, while giving you full control over the underlying AWS resources if needed. AWS Elastic Beanstalk supports a variety of platforms and languages, such as Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker. You can use the AWS Management Console, the AWS CLI, the AWS SDKs, or the AWS Elastic Beanstalk API to create and manage your applications. You can also use AWS CodeStar, AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS CodePipeline to integrate AWS Elastic Beanstalk with your development and deployment workflows12"
+    },
+    {
+        "id": 190,
+        "question": "A company wants to run its workload on Amazon EC2 instances for more than 1 year. This workload will run continuously. Which option offers a discounted hourly rate compared to the hourly rate of On-Demand Instances?",
+        "options": {
+            "A": "AWS Graviton processor",
+            "B": "Dedicated Hosts",
+            "C": "EC2 Instance Savings Plans",
+            "D": "Amazon EC2 Auto Scaling instances"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " EC2 Instance Savings Plans are a flexible pricing model that offer discounted hourly rates on Amazon EC2 instance usage for a 1 or 3 year term. EC2 Instance Savings Plans provide savings up to 72% off On-Demand rates, in exchange for a commitment to a specific instance family in a chosen AWS Region (for example, M5 in Virginia). These plans automatically apply to usage regardless of size (for example, m5.xlarge, m5.2xlarge, etc.), OS (for example, Windows, Linux, etc.), and tenancy (Host, Dedicated, Default) within the specified family in a Region. With an EC2 Instance Savings Plan, you can change your instance size within the instance family (for example, from c5.xlarge to c5.2xlarge) or the operating system (for example, from Windows to Linux), or move from Dedicated tenancy to Default and continue to receive the discounted rate provided by your EC2 Instance Savings Plan4567. References: 4: Compute Savings Plans – Amazon Web Services, 5: What are Savings Plans? - Savings Plans, 6: How To Cut Your AWS Bill With Savings Plans (and avoid some common …, 7: AWS Savings Plans vs Reserved Instances #NAME?"
+    },
+    {
+        "id": 191,
+        "question": "Which tasks are customer responsibilities, according to the AWS shared responsibility model? (Select TWO.)",
+        "options": {
+            "A": "Configure the AWS provided security group firewall.",
+            "B": "Classify company assets in the AWS Cloud.",
+            "C": "Determine which Availability Zones to use for Amazon S3 buckets.",
+            "D": "Patch or upgrade Amazon DynamoDB.",
+            "E": "Select Amazon EC2 instances to run AWS Lambda on.",
+            "F": "AWS Config"
+        },
+        "correct_answers": [
+            "A",
+            "B"
+        ],
+        "type": "multiple",
+        "explanation": " According to the AWS shared responsibility model, the customer is responsible for security in the cloud, which includes the tasks of configuring the AWS provided security group firewall and classifying company assets in the AWS Cloud. A security group is a virtual firewall that controls the inbound and outbound traffic for one or more EC2 instances. The customer must configure the security group rules to allow or deny traffic based on protocol, port, or source and destination IP address2 Classifying company assets in the AWS Cloud means identifying the types, categories, and sensitivity levels of the data and resources that the customer stores and processes on AWS. The customer must also determine the applicable compliance requirements and regulations that apply to their assets, and implement the appropriate security controls and measures to protect them"
+    },
+    {
+        "id": 192,
+        "question": "Which AWS service provides a single location to track the progress of application migrations?",
+        "options": {
+            "A": "AWS Application Discovery Service",
+            "B": "AWS Application Migration Service",
+            "C": "AWS Service Catalog",
+            "D": "AWS Migration Hub"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Migration Hub is a service that provides a single location to track the progress of application migrations across multiple AWS and partner solutions. It allows you to choose the AWS and partner migration tools that best fit your needs, while providing visibility into the status of migrations across your portfolio of applications1. AWS Migration Hub supports migration status updates from the following tools: AWS Application Migration Service, AWS Database Migration Service, CloudEndure Migration, Server Migration Service, and Migrate for Compute Engine1. The other options are not correct for the following reasons: ? AWS Application Discovery Service is a service that helps you plan your migration projects by automatically identifying servers, applications, and dependencies in your on-premises data centers2. It does not track the progress of application migrations, but rather provides information to help you plan and scope your migrations. ? AWS Application Migration Service is a service that helps you migrate and modernize applications from any source infrastructure to AWS with minimal downtime and disruption3. It is one of the migration tools that can send status updates to AWS Migration Hub, but it is not the service that provides a single location to track the progress of application migrations. ? AWS Service Catalog is a service that allows you to create and manage catalogs of IT services that are approved for use on AWS4. It does not track the progress of application migrations, but rather helps you manage the provisioning and governance of your IT services. References: ? 1: What Is AWS Migration Hub? - AWS Migration Hub ? 2: What Is AWS Application Discovery Service? - AWS Application Discovery Service ? 3: App Migration Tool - AWS Application Migration Service - AWS ? 4: What Is AWS Service Catalog? - AWS Service Catalog"
+    },
+    {
+        "id": 193,
+        "question": "A company wants to generate a list of IAM users. The company also wants to view the status of various credentials that are associated with the users, such as password, access keys: and multi-factor authentication (MFA) devices Which AWS service or feature will meet these requirements?",
+        "options": {
+            "A": "IAM credential report",
+            "B": "AWS IAM Identity Center (AWS Single Sign-On)",
+            "C": "AWS Identity and Access Management Access Analyzer",
+            "D": "AWS Cost and Usage Report"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " An IAM credential report is a feature of AWS Identity and Access Management (IAM) that allows you to view and download a report that lists all IAM users in your account and the status of their various credentials, such as passwords, access keys, and MFA devices. You can use this report to audit the security status of your IAM users and ensure that they follow the best practices for credential management1. References: 1: AWS Documentation - IAM User Guide - Getting credential reports for your AWS account"
+    },
+    {
+        "id": 194,
+        "question": "Which AWS service can a company use to find security and compliance reports, including International Organization for Standardization (ISO) reports?",
+        "options": {
+            "A": "AWS Artifact",
+            "B": "Amazon CloudWatch",
+            "C": "AWS Config",
+            "D": "AWS Audit Manager"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Artifact is a self-service portal that provides on-demand access to AWS security and compliance reports and select online agreements. You can use AWS Artifact to download AWS service audit reports, such as ISO, PCI, and SOC, and to accept and manage agreements with AWS, such as the Business Associate Addendum (BAA)."
+    },
+    {
+        "id": 195,
+        "question": "A company has migrated its workloads to AWS. The company wants to adopt AWS at scale and operate more efficiently and securely. Which AWS service or framework should the company use for operational support?",
+        "options": {
+            "A": "AWS Support",
+            "B": "AWS Cloud Adoption Framework (AWS CAF)",
+            "C": "AWS Managed Services (AMS)",
+            "D": "AWS Well-Architected Framework"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " The AWS Well-Architected Framework is a set of best practices and guidelines for designing and operating workloads on AWS. It helps customers achieve operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. The framework is based on six pillars, each with its own design principles, best practices, and questions. Customers can use the framework to assess their current state, identify gaps, and implement improvements12. AWS Support is a service that provides technical assistance, guidance, and resources for AWS customers. It offers different plans with varying levels of access to AWS experts, response times, and features3. AWS Support does not provide a comprehensive framework for operational support. AWS Cloud Adoption Framework (AWS CAF) is a guidance tool that helps customers plan and execute their cloud migration journey. It provides a set of perspectives, capabilities, and best practices to align the business and technical aspects of cloud adoption4. AWS CAF does not focus on operational support for existing workloads on AWS. AWS Managed Services (AMS) is a service that operates AWS infrastructure on behalf of customers. It provides a secure and compliant environment, automates common activities, and applies best practices for provisioning, patching, backup, recovery, and monitoring5. AMS does not provide a framework for customers to operate their own workloads on AWS."
+    },
+    {
+        "id": 196,
+        "question": "Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?",
+        "options": {
+            "A": "Data architecture",
+            "B": "Event management",
+            "C": "Cloud fluency",
+            "D": "Strategic partnership"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " Cloud fluency is a capability that belongs to the people perspective of the AWS Cloud Adoption Framework (AWS CAF). Cloud fluency is the ability of the workforce to understand the benefits, challenges, and best practices of cloud computing, and to apply them to their roles and responsibilities. Cloud fluency helps the organization to adopt a cloud mindset, culture, and skills, and to leverage the full potential of the cloud. Cloud fluency can be achieved through various methods, such as training, certification, mentoring, coaching, and hands-on experience. Cloud fluency is one of the four capabilities of the people perspective, along with culture, organizational structure, and leadership. The other three capabilities belong to different perspectives of the AWS CAF. Data architecture is a capability of the platform perspective, which helps you design and implement data solutions that meet your business and technical requirements. Event management is a capability of the operations perspective, which helps you monitor and respond to events that affect the availability, performance, and security of your cloud resources. Strategic partnership is a capability of the business perspective, which helps you establish and maintain relationships with external stakeholders, such as customers, partners, suppliers, and regulators, to create value and achieve your business goals. References: AWS Cloud Adoption Framework: People Perspective, AWS CAF - Cloud Adoption Framework - W3Schools"
+    },
+    {
+        "id": 197,
+        "question": "A company is hosting an application in the AWS Cloud. The company wants to verify that underlying AWS services and general AWS infrastructure are operating normally. Which combination of AWS services can the company use to gather the required information? (Select TWO.)",
+        "options": {
+            "A": "AWS Personal Health Dashboard",
+            "B": "AWS Systems Manager",
+            "C": "AWS Trusted Advisor",
+            "D": "AWS Service Health Dashboard",
+            "E": "AWS Service Catalog"
+        },
+        "correct_answers": [
+            "A",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " AWS Personal Health Dashboard and AWS Service Health Dashboard are two AWS services that can help the company to verify that underlying AWS services and general AWS infrastructure are operating normally. AWS Personal Health Dashboard provides a personalized view into the performance and availability of the AWS services you are using, as well as alerts that are automatically triggered by changes in the health of those services. In addition to event-based alerts, Personal Health Dashboard provides proactive notifications of scheduled activities, such as any changes to the infrastructure powering your resources, enabling you to better plan for events that may affect you. These notifications can be delivered to you via email or mobile for quick visibility, and can always be viewed from within the AWS Management Console. When you get an alert, it includes detailed information and guidance, enabling you to take immediate action to address AWS events impacting your resources3. AWS Service Health Dashboard provides a general status of AWS services, and the Service health view displays the current and historical status of all AWS services. This page shows reported service events for services across AWS Regions. You don’t need to sign in or have an AWS account to access the AWS Service Health Dashboard – Service health page. You can also subscribe to RSS feeds for specific services or regions to receive notifications about service events4. References: Getting started with your AWS Health Dashboard – Your account health, Introducing AWS Personal Health Dashboard"
+    },
+    {
+        "id": 198,
+        "question": "Which of the following is a benefit of using an AWS managed service?",
+        "options": {
+            "A": "Reduced operational overhead for a company's IT staff",
+            "B": "Increased fixed costs that can be predicted by a finance team",
+            "C": "Removal of the need to have a backup strategy",
+            "D": "Removal of the need to follow compliance standards"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " This is a benefit of using an AWS managed service, such as Amazon S3, Amazon DynamoDB, or AWS Lambda. AWS managed services are fully managed by AWS, which means that AWS handles the provisioning, scaling, patching, backup, and recovery of the underlying infrastructure and software. This reduces the operational overhead for the company’s IT staff, who can focus on their core business logic and innovation. You can learn more about the AWS managed services from this webpage or this digital course."
+    },
+    {
+        "id": 199,
+        "question": "What does the concept of agility mean in AWS Cloud computing? (Select TWO.)",
+        "options": {
+            "A": "The speed at which AWS resources are implemented",
+            "B": "The speed at which AWS creates new AWS Regions",
+            "C": "The ability to experiment quickly",
+            "D": "The elimination of wasted capacity",
+            "E": "The low cost of entry into cloud computing"
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " Agility in AWS Cloud computing means the ability to rapidly provision and deprovision AWS resources as needed, and the ability to experiment quickly with new ideas and solutions. Agility helps businesses to respond to changing customer demands, market opportunities, and competitive threats, and to innovate faster and cheaper. Agility also reduces the risk of failure, as businesses can test and validate their assumptions before committing to large-scale deployments. Some of the benefits of agility in AWS Cloud computing are: ? The speed at which AWS resources are implemented: AWS provides a variety of services and tools that allow you to create, configure, and launch AWS resources in minutes, using the AWS Management Console, the AWS Command Line Interface (AWS CLI), the AWS Software Development Kits (AWS SDKs), or the AWS CloudFormation templates. You can also use the AWS Cloud Development Kit (AWS CDK) to define your AWS resources as code using familiar programming languages, and synthesize them into AWS CloudFormation templates. You can also use the AWS Service Catalog to create and manage standardized portfolios of AWS resources that meet your organizational policies and best practices. AWS also offers on-demand, pay-as-you-go pricing models, so you only pay for the resources you use, and you can scale them up or down as your needs change12345 ? The ability to experiment quickly: AWS enables you to experiment quickly with new ideas and solutions, without having to invest in upfront capital or long-term commitments. You can use AWS to create and test multiple prototypes, hypotheses, and minimum viable products (MVPs) in parallel, and measure their performance and feedback. You can also use AWS to leverage existing services and solutions, such as AWS Marketplace, AWS Solutions, and AWS Quick Starts, that can help you accelerate your innovation process. AWS also supports a culture of experimentation and learning, by providing tools and resources for continuous integration and delivery (CI/CD), testing, monitoring, and analytics. References: Six advantages of cloud computing - Overview of Amazon Web Services, AWS Cloud Development Kit (AWS CDK), AWS Service Catalog, AWS Pricing, AWS CloudFormation, [Experimentation and Testing - AWS Well-Architected Framework], [AWS Marketplace], [AWS Solutions], [AWS Quick Starts], [AWS Developer Tools]"
+    },
+    {
+        "id": 200,
+        "question": "A company plans to migrate to the AWS Cloud. The company wants to use the AWS Cloud Adoption Framework (AWS CAF) to define and track business outcomes as part of its cloud transformation journey. Which AWS CAF governance perspective capability will meet these requirements?",
+        "options": {
+            "A": "Benefits management",
+            "B": "Risk management",
+            "C": "Application portfolio management",
+            "D": "Cloud financial management"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " The correct answer is A. Benefits management. Benefits management is the AWS CAF governance perspective capability that helps you define and track business outcomes as part of your cloud transformation journey. Benefits management helps you align your cloud initiatives with your business objectives, measure the value and impact of your cloud investments, and communicate the benefits of cloud adoption to your stakeholders12. Risk management is the AWS CAF governance perspective capability that helps you identify and mitigate the potential risks associated with cloud adoption, such as security, compliance, legal, and operational risks12. Application portfolio management is the AWS CAF governance perspective capability that helps you assess and optimize your existing application portfolio for cloud migration or modernization. Application portfolio management helps you categorize your applications based on their business value and technical fit, prioritize them for cloud adoption, and select the best migration or modernization strategy for each application12. Cloud financial management is the AWS CAF governance perspective capability that helps you manage and optimize the costs and value of your cloud resources. Cloud financial management helps you plan and budget for cloud adoption, track and allocate cloud costs, implement cost optimization strategies, and report on cloud financial performance12. References: 1: AWS Cloud Adoption Framework: Governance Perspective 2: All you need to know about AWS Cloud Adoption Framework — Governance Perspective"
+    },
+    {
+        "id": 201,
+        "question": "Which AWS service is an in-memory data store service?",
+        "options": {
+            "A": "Amazon Aurora",
+            "B": "Amazon RDS",
+            "C": "Amazon DynamoDB",
+            "D": "Amazon ElastiCache"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " Amazon ElastiCache is a fully managed in-memory data store and cache service that delivers sub-millisecond response times to applications. You can use ElastiCache as a primary data store for your applications, or as a cache to improve the performance of your existing databases. ElastiCache supports two popular open-source in- memory engines: Redis and Memcached5."
+    },
+    {
+        "id": 202,
+        "question": "A company wants to migrate to AWS and use the same security software it uses on premises. The security software vendor offers its security software as a service on AWS. Where can the company purchase the security solution?",
+        "options": {
+            "A": "AWS Partner Solutions Finder",
+            "B": "AWS Support Center",
+            "C": "AWS Management Console",
+            "D": "AWS Marketplace"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Marketplace is an online store that helps customers find, buy, and immediately start using the software and services that run on AWS. Customers can choose from a wide range of software products in popular categories such as security, networking, storage, machine learning, business intelligence, database, and DevOps. Customers can also use AWS Marketplace to purchase software as a service (SaaS) solutions that are integrated with AWS. Customers can benefit from simplified procurement, billing, and deployment processes, as well as flexible pricing options and free trials. Customers can also leverage AWS Marketplace to discover and subscribe to solutions offered by AWS Partners, such as the security software vendor mentioned in the question. References: AWS Marketplace, [AWS Marketplace: Software as a Service (SaaS)], [AWS Cloud Practitioner Essentials: Module 6 - AWS Pricing, Billing, and Support]"
+    },
+    {
+        "id": 203,
+        "question": "Which AWS service is always provided at no charge?",
+        "options": {
+            "A": "Amazon S3",
+            "B": "AWS Identity and Access Management (IAM)",
+            "C": "Elastic Load Balancers",
+            "D": "AWS WAF"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You can use IAM to create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources. IAM is always provided at no charge12. References: 1: AWS Identity and Access Management (IAM) - Amazon Web Services (AWS), 2: Which aws service is always provided at no charge? - Brainly.in"
+    },
+    {
+        "id": 204,
+        "question": "Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Select TWO.)",
+        "options": {
+            "A": "Control access to AWS service APIs and to other specific resources.",
+            "B": "Provide intelligent threat detection and continuous monitoring.",
+            "C": "Protect the AWS environment using multi-factor authentication (MFA).",
+            "D": "Grant users access to AWS data centers.",
+            "E": "Provide firewall protection for applications from common web attacks."
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " AWS Identity and Access Management (IAM) is a service that enables you to manage access to AWS services and resources securely. You can use IAM to perform the following actions: ? Control access to AWS service APIs and to other specific resources: You can create users, groups, roles, and policies that define who can access which AWS resources and how. You can also use IAM to grant temporary access to users or applications that need to perform certain tasks on your behalf3 ? Protect the AWS environment using multi-factor authentication (MFA): You can enable MFA for your IAM users and root user to add an extra layer of security to your AWS account. MFA requires users to provide a unique authentication code from an approved device or SMS text message, in addition to their user name and password, when they sign in to AWS4"
+    },
+    {
+        "id": 205,
+        "question": "Which options are AWS Cloud Adoption Framework (AWS CAF) people perspective capabilities? (Select TWO.)",
+        "options": {
+            "A": "Organizational alignment",
+            "B": "Portfolio management",
+            "C": "Organization design",
+            "D": "Risk management",
+            "E": "Modern application development"
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " The AWS Cloud Adoption Framework (AWS CAF) people perspective capabilities are the organizational skills and processes that enable effective cloud adoption. According to the AWS CAF people perspective whitepaper1, there are seven capabilities in this perspective, two of which are: ? Organizational alignment: This capability helps you align your organizational structure, roles, and responsibilities to support your cloud transformation goals and objectives. It involves assessing your current and desired state of alignment, identifying gaps and misalignments, and designing and implementing changes to optimize your cloud performance1. ? Organization design: This capability helps you design and evolve your organization to enable agility, innovation, and collaboration in the cloud. It involves defining your cloud operating model, identifying the skills and competencies needed for cloud roles, and creating career paths and development plans for your cloud workforce1. The other options are not capabilities in the AWS CAF people perspective. Portfolio management, risk management, and modern application development are capabilities in the AWS CAF business perspective, governance perspective, and platform perspective respectively2. References: ? 1: AWS Cloud Adoption Framework: People Perspective - AWS Cloud Adoption Framework: People Perspective ? 2: AWS Cloud Adoption Framework - AWS Cloud Adoption Framework"
+    },
+    {
+        "id": 206,
+        "question": "Which of the following is a software development framework that a company can use to define cloud resources as code and provision the resources through AWS CloudFormation?",
+        "options": {
+            "A": "AWS CLI",
+            "B": "AWS Developer Center",
+            "C": "AWS Cloud Development Kit (AWS CDK)",
+            "D": "AWS CodeStar"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS Cloud Development Kit (AWS CDK) is a software development framework that allows you to define cloud resources as code using familiar programming languages, such as TypeScript, Python, Java, .NET, and Go (in Developer Preview). You can use AWS CDK to model your application resources using high-level constructs that provide sensible defaults and best practices, or use low-level constructs that provide full access to the underlying AWS CloudFormation resources. AWS CDK synthesizes your code into AWS CloudFormation templates that you can deploy using the AWS CDK CLI or the AWS Management Console. AWS CDK also integrates with other AWS services, such as AWS CodeCommit, AWS CodeBuild, AWS CodePipeline, AWS Lambda, Amazon EC2, Amazon S3, and more, to help you automate your development and deployment processes. AWS CDK is an open-source framework that you can extend and contribute to. References: Cloud Development Framework - AWS Cloud Development Kit - AWS, AWS Cloud Development Kit Documentation, AWS Cloud Development Kit - Wikipedia, AWS CDK Intro Workshop | AWS CDK Workshop"
+    },
+    {
+        "id": 207,
+        "question": "Which of the following is a pillar of the AWS Well-Architected Framework?",
+        "options": {
+            "A": "Redundancy",
+            "B": "Operational excellence",
+            "C": "Availability",
+            "D": "Multi-Region"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " The AWS Well-Architected Framework helps cloud architects build secure, high-performing, resilient, and efficient infrastructure for their applications and workloads. Based on five pillars — operational excellence, security, reliability, performance efficiency, and cost optimization — the Framework provides a consistent approach for customers and partners to evaluate architectures, and implement designs that can scale over time. Operational excellence is one of the pillars of the Framework, and it focuses on running and monitoring systems to deliver business value, and continually improving processes and procedures."
+    },
+    {
+        "id": 208,
+        "question": "A company is building an application on AWS. The application needs to comply with credit card regulatory requirements. The company needs proof that the AWS services and deployment are in compliance. Which actions should the company take to meet these requirements? (Select TWO.)",
+        "options": {
+            "A": "Use Amazon Inspector to submit the application for certification.",
+            "B": "Ensure that the application's underlying hardware components comply with requirements.",
+            "C": "Use AWS Artifact to access AWS documents about the compliance of the services.",
+            "D": "Get the compliance of the application certified by a company assessor.",
+            "E": "Use AWS Security Hub to certify the compliance of the application."
+        },
+        "correct_answers": [
+            "C",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " Using AWS Artifact to access AWS documents about the compliance of the services, and getting the compliance of the application certified by a company assessor are actions that the company should take to meet the requirements of complying with credit card regulatory requirements. AWS Artifact is a service that provides on-demand access to AWS security and compliance reports and select online agreements. Reports available in AWS Artifact include our Service Organization Control (SOC) reports, Payment Card Industry (PCI) reports, and certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operating effectiveness of AWS security controls. AWS Artifact can help you demonstrate compliance with credit card regulatory requirements by providing you with proof that the AWS services and deployment are in compliance. Getting the compliance of the application certified by a company assessor is an action that the company should take to ensure that the application meets the specific requirements of the credit card industry. A company assessor is an independent third-party entity that is qualified to assess the compliance of the application with the relevant standards and regulations. Using Amazon Inspector to submit the application for certification is not an action that the company should take, because Amazon Inspector is a service that helps you improve the security and compliance of your applications deployed on AWS by automatically assessing them for vulnerabilities and deviations from best practices, but it does not provide certification for the applications. Ensuring that the application’s underlying hardware components comply with requirements is not an action that the company should take, because the application is deployed on AWS, and AWS is responsible for the security and compliance of the underlying hardware components. This is part of the shared responsibility model, where AWS is responsible for security of the cloud, and customers are responsible for security in the cloud. Using AWS Security Hub to certify the compliance of the application is not an action that the company should take, because AWS Security Hub is a service that gives you a comprehensive view of your security posture across your AWS accounts and helps you check your environment against security industry standards and best practices, but it does not provide certification for the applications."
+    },
+    {
+        "id": 209,
+        "question": "Which AWS services are supported by Savings Plans? (Select TWO.)",
+        "options": {
+            "A": "Amazon EC2",
+            "B": "Amazon RDS",
+            "C": "Amazon SageMaker",
+            "D": "Amazon Redshift",
+            "E": "Amazon DynamoDB"
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " The AWS services that are supported by Savings Plans are: ? Amazon EC2: Amazon EC2 is a service that provides scalable computing capacity in the AWS cloud. You can use Amazon EC2 to launch virtual servers, configure security and networking, and manage storage. Amazon EC2 is eligible for both Compute Savings Plans and EC2 Instance Savings Plans12. ? Amazon SageMaker: Amazon SageMaker is a service that helps you build and deploy machine learning models. You can use Amazon SageMaker to access Jupyter notebooks, use common machine learning algorithms, train and tune models, and deploy them to a hosted environment. Amazon SageMaker is eligible for SageMaker Savings Plans13. The other options are not supported by Savings Plans. Amazon RDS, Amazon Redshift, and Amazon DynamoDB are database services that are eligible for Reserved Instances, but not Savings Plans4."
+    },
+    {
+        "id": 210,
+        "question": "Which AWS service or feature offers security for a VPC by acting as a firewall to control traffic in and out of subnets?",
+        "options": {
+            "A": "AWS Security Hub",
+            "B": "Security groups",
+            "C": "Network ACL",
+            "D": "AWSWAF"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " A network access control list (network ACL) is a feature that acts as a firewall for controlling traffic in and out of one or more subnets in a virtual private cloud (VPC). Network ACLs can be configured with rules that allow or deny traffic based on the source and destination IP addresses, ports, and protocols1. AWS Security Hub is a service that provides a comprehensive view of the security posture of AWS accounts and resources2. Security groups are features that act as firewalls for controlling traffic at the instance level3. AWS WAF is a web application firewall that helps protect web applications from common web exploits4."
+    },
+    {
+        "id": 211,
+        "question": "A company needs to search for text in documents that are stored in Amazon S3. Which AWS service will meet these requirements?",
+        "options": {
+            "A": "Amazon Kendra",
+            "B": "Amazon Rekognition",
+            "C": "Amazon Polly",
+            "D": "Amazon Lex"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Amazon Kendra is a highly accurate and easy to use intelligent search service powered by machine learning. It enables users to easily find the content they are looking for, even when it is scattered across multiple locations and content repositories within their organization. Amazon Kendra supports natural language queries, and can search for text in documents stored in Amazon S3, as well as other sources such as SharePoint, OneDrive, Salesforce, ServiceNow, and more1. Amazon Rekognition is a computer vision service that makes it easy to add image and video analysis to applications. It can detect objects, faces, text, scenes, activities, and emotions in images and videos. However, it is not designed for searching for text in documents stored in Amazon S32. Amazon Polly is a text-to-speech service that turns text into lifelike speech. It can create audio versions of books, articles, podcasts, and more. However, it is not designed for searching for text in documents stored in Amazon S33. Amazon Lex is a service for building conversational interfaces using voice and text. It can create chatbots that can interact with users using natural language. However, it is not designed for searching for text in documents stored in Amazon S34. References: ? Amazon Kendra – Intelligent Search Service Powered by Machine Learning ? Amazon Rekognition – Video and Image - AWS ? Amazon Polly – Text-to-Speech Service - AWS ? Amazon Lex – Build Conversation Bots - AWS"
+    },
+    {
+        "id": 212,
+        "question": "A company is building an application in the AWS Cloud. The company wants to use temporary credentials for the application to access other AWS resources. Which AWS service will meet these requirements?",
+        "options": {
+            "A": "AWS Key Management Service (Aws KMS)",
+            "B": "AWS CloudHSM",
+            "C": "Amazon Cognito",
+            "D": "AWS Security Token Service (Aws STS)"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Security Token Service (AWS STS) is a service that provides temporary security credentials to users or applications that need to access AWS resources. The temporary credentials have a limited lifetime and can be configured to last from a few minutes to several hours. The credentials are not stored with the user or application, but are generated dynamically and provided on request. The credentials work almost identically to long-term access key credentials, but have the advantage of not requiring distribution, rotation, or revocation1. AWS Key Management Service (AWS KMS) is a service that provides encryption and decryption services for data and keys. It does not provide temporary security credentials2. AWS CloudHSM is a service that provides hardware security modules (HSMs) for cryptographic operations and key management. It does not provide temporary security credentials3. Amazon Cognito is a service that provides user authentication and authorization for web and mobile applications. It can also provide temporary security credentials for authenticated users, but not for applications4."
+    },
+    {
+        "id": 213,
+        "question": "Which option is the default pricing model for Amazon EC2 instances?",
+        "options": {
+            "A": "On-Demand Instances",
+            "B": "Savings Plans",
+            "C": "Spot Instances",
+            "D": "Reserved Instances"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " On-Demand Instances are the default pricing model for Amazon EC2 instances. They allow users to pay for compute capacity by the second, with no long-term commitments or upfront payments. They are suitable for applications with short-term, irregular, or unpredictable workloads that cannot be interrupted3. Savings Plans are a pricing model that offer significant savings on Amazon EC2 and AWS Fargate usage, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- year or 3-year term. Spot Instances are a pricing model that offer spare Amazon EC2 compute capacity at up to 90% discount compared to On-Demand prices, but they can be interrupted by AWS with a two-minute notice when the demand exceeds the supply. Reserved Instances are a pricing model that offer up to 75% discount compared to On- Demand prices, in exchange for a commitment to use a specific instance type and size in a specific region for a 1-year or 3-year term."
+    },
+    {
+        "id": 214,
+        "question": "Which of the following is a benefit of operating in the AWS Cloud?",
+        "options": {
+            "A": "The ability to migrate on-premises network devices to the AWS Cloud",
+            "B": "The ability to expand compute, storage, and memory when needed",
+            "C": "The ability to host custom hardware in the AWS Cloud",
+            "D": "The ability to customize the underlying hypervisor layer for Amazon EC2"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " One of the benefits of operating in the AWS Cloud is the ability to expand compute, storage, and memory when needed, which enables users to scale their applications and resources up or down based on demand. This also helps users optimize their costs and performance. The ability to migrate on-premises network devices to the AWS Cloud, the ability to host custom hardware in the AWS Cloud, and the ability to customize the underlying hypervisor layer for Amazon EC2 are not benefits of operating in the AWS Cloud, as they are either not possible or not recommended by AWS ."
+    },
+    {
+        "id": 215,
+        "question": "A company has deployed an Amazon EC2 instance. Which option is an AWS responsibility under the AWS shared responsibility model?",
+        "options": {
+            "A": "Managing and encrypting application data",
+            "B": "Installing updates and security patches of guest operating system",
+            "C": "Configuration of infrastructure devices",
+            "D": "Configuration of security groups on each instance"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " According to the AWS shared responsibility model, AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud, such as data centers, hardware, software, networking, and facilities1. This includes the configuration of infrastructure devices, such as routers, switches, firewalls, and load balancers2. Customers are responsible for managing their data, applications, operating systems, security groups, and other aspects of their AWS environment1. Therefore, options A, B, and D are customer responsibilities, not AWS responsibilities. References: 1: AWS Well-Architected Framework - Elasticity; 2: Reactive Systems on AWS - Elastic"
+    },
+    {
+        "id": 216,
+        "question": "A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which tasks should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)",
+        "options": {
+            "A": "Realign teams to focus on products and value streams.",
+            "B": "Create new value propositions with new products and services.",
+            "C": "Use agile methods to rapidly iterate and evolve.",
+            "D": "Use a new data and analytics platform to create actionable insights.",
+            "E": "Migrate and modernize legacy infrastructure."
+        },
+        "correct_answers": [
+            "A",
+            "C"
+        ],
+        "type": "multiple",
+        "explanation": " Realigning teams to focus on products and value streams, and using agile methods to rapidly iterate and evolve are tasks that the company should perform to meet the requirements of becoming more responsive to customer inquiries and feedback, according to the AWS Cloud Adoption Framework (AWS CAF). AWS CAF organizes guidance into six areas of focus, called perspectives: business, people, governance, platform, security, and operations. Each perspective is divided into capabilities, which describe the skills and processes to execute the transition effectively. The people perspective helps you prepare your organization for cloud adoption, and includes capabilities such as organizational change management, staff skills and readiness, and organizational alignment. The business perspective helps you align IT strategy with business strategy, and includes capabilities such as business case development, value proposition, and product ownership. Creating new value propositions with new products and services is a task that belongs to the business perspective, but it is not directly related to the requirement of becoming more responsive to customer inquiries and feedback. Using a new data and analytics platform to create actionable insights is a task that belongs to the platform perspective, which helps you design, implement, and optimize the architecture of the AWS environment. However, it is also not directly related to the requirement of becoming more responsive to customer inquiries and feedback. Migrating and modernizing legacy infrastructure is a task that belongs to the operations perspective, which helps you enable, run, use, operate, and recover IT workloads to the level agreed upon with your business stakeholders. However, it is also not directly related to the requirement of becoming more responsive to customer inquiries and feedback."
+    },
+    {
+        "id": 217,
+        "question": "Which AWS service requires the customer to be fully responsible for applying operating system patches?",
+        "options": {
+            "A": "Amazon DynamoDB",
+            "B": "AWS Lambda",
+            "C": "AWS Fargate",
+            "D": "Amazon EC2"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " Amazon EC2 is the AWS service that requires the customer to be fully responsible for applying operating system patches. Amazon EC2 is a service that provides secure, resizable compute capacity in the cloud. Customers can launch virtual servers called instances and choose from various configurations of CPU, memory, storage, and networking resources1. Customers have full control and access to their instances, which means they are also responsible for managing and maintaining them, including applying operating system patches2. Customers can use AWS Systems Manager Patch Manager, a feature of AWS Systems Manager, to automate the process of patching their EC2 instances with both security-related updates and other types of updates3."
+    },
+    {
+        "id": 218,
+        "question": "Which perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a capability for well-designed data and analytics architecture?",
+        "options": {
+            "A": "Security",
+            "B": "Governance",
+            "C": "Operations",
+            "D": "Platform"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " The correct answer is D. Platform. The Platform perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a capability for well-designed data and analytics architecture. This capability helps you design, implement, and optimize your data and analytics solutions on AWS, using services such as Amazon S3, Amazon Redshift, Amazon EMR, Amazon Kinesis, Amazon Athena, and Amazon QuickSight. A well-designed data and analytics architecture enables you to collect, store, process, analyze, and visualize data from various sources, and derive insights that can drive your business decisions12. The Security perspective does not include a capability for data and analytics architecture, but it does include a capability for data protection, which helps you secure your data at rest and in transit using encryption, key management, access control, and auditing13. The Governance perspective does not include a capability for data and analytics architecture, but it does include a capability for data governance, which helps you manage the quality, availability, usability, integrity, and security of your data assets14. The Operations perspective does not include a capability for data and analytics architecture, but it does include a capability for data operations, which helps you monitor, troubleshoot, and optimize the performance and availability of your data pipelines and workloads1 . References: 1: Foundational capabilities - An Overview of the AWS Cloud Adoption Framework 2: [AWS Cloud Adoption Framework: Platform Perspective] 3: [AWS Cloud Adoption Framework: Security Perspective] 4: [AWS Cloud Adoption Framework: Governance Perspective] : [AWS Cloud Adoption Framework: Operations Perspective]"
+    },
+    {
+        "id": 219,
+        "question": "Which maintenance task is the customer's responsibility, according to the AWS shared responsibility model?",
+        "options": {
+            "A": "Physical connectivity among Availability Zones",
+            "B": "Network switch maintenance",
+            "C": "Hardware updates and firmware patches",
+            "D": "Amazon EC2 updates and security patches"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " According to the AWS shared responsibility model, customers are responsible for managing their data, applications, operating systems, security groups, and other aspects of their AWS environment. This includes installing updates and security patches of the guest operating system and any application software or utilities installed by the customer on the instances. AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud, such as data centers, hardware, software, networking, and facilities. This includes the physical connectivity among Availability Zones, the network switch maintenance, and the hardware updates and firmware patches. Therefore, option D is the correct answer, and options A, B, and C are AWS responsibilities, not customer responsibilities. References: : AWS Well-Architected Framework - Elasticity; : Reactive Systems on AWS - Elastic"
+    },
+    {
+        "id": 220,
+        "question": "Which AWS service provides protection against DDoS attacks for applications that run in the AWS Cloud?",
+        "options": {
+            "A": "Amazon VPC",
+            "B": "AWS Shield",
+            "C": "AWS Audit Manager",
+            "D": "AWS Config"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Shield is an AWS service that provides protection against distributed denial of service (DDoS) attacks for applications that run in the AWS Cloud. DDoS attacks are attempts to make an online service unavailable by overwhelming it with traffic from multiple sources. AWS Shield provides two tiers of protection: AWS Shield Standard and AWS Shield Advanced. AWS Shield Standard is automatically enabled for all AWS customers at no additional charge. It provides protection against common and frequently occurring network and transport layer DDoS attacks. AWS Shield Advanced is an optional paid service that provides additional protection against larger and more sophisticated DDoS attacks. AWS Shield Advanced also provides access to 24/7 DDoS response team, cost protection, and enhanced detection and mitigation capabilities"
+    },
+    {
+        "id": 221,
+        "question": "Which AWS service supports a hybrid architecture that gives users the ability to extend AWS infrastructure, AWS services, APIs, and tools to data centers, co- location environments, or on-premises facilities?",
+        "options": {
+            "A": "AWS Snowmobile",
+            "B": "AWS Local Zones",
+            "C": "AWS Outposts",
+            "D": "AWS Fargate"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS Outposts is a service that delivers AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience. AWS Outposts allows you to extend and run native AWS services on premises, and is available in a variety of form factors, from 1U and 2U Outposts servers to 42U Outposts racks, and multiple rack deployments. With AWS Outposts, you can run some AWS services locally and connect to a broad range of services available in the local AWS Region. Run applications and workloads on premises using familiar AWS services, tools, and APIs2. AWS Outposts is the only AWS service that supports a hybrid architecture that gives users the ability to extend AWS infrastructure, AWS services, APIs, and tools to data centers, co- location environments, or on-premises facilities. References: On-Premises Infrastructure - AWS Outposts Family"
+    },
+    {
+        "id": 222,
+        "question": "A company has a centralized group of users with large file storage requirements that have exceeded the space available on premises. The company wants to extend its file storage capabilities for this group while retaining the performance benefit of sharing content locally. What is the MOST operationally efficient AWS solution for this scenario?",
+        "options": {
+            "A": "Create an Amazon S3 bucket for each use. Mount each bucket by using an S3 file system mounting utility.",
+            "B": "Configure and deploy an AWS Storage Gateway file gateway. Connect each user's workstation to the file gateway.",
+            "C": "Move each user's working environment to Amazon Workspace. Set up an Amazon WorkDocs account for each user.",
+            "D": "Deploy an Amazon EC2 instance and attach an Amazon Elastic Block Store (Amazon EBS) Provisioned IOPS volume. Share the EBS volume directly with the users."
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Storage Gateway is a hybrid cloud storage service that allows you to extend your on-premises file storage capabilities to the AWS Cloud. AWS Storage Gateway file gateway enables you to store and access your files in Amazon S3 using industry-standard file protocols such as NFS and SMB. File gateway caches frequently accessed files locally, providing low-latency access to your data. File gateway also optimizes the transfer of data between your on-premises environment and AWS, minimizing the amount of bandwidth consumed. By using file gateway, you can retain the performance benefit of sharing content locally while leveraging the scalability, durability, and cost-effectiveness of Amazon S3. References: AWS Storage Gateway, File Gateway"
+    },
+    {
+        "id": 223,
+        "question": "A company uses AWS for its web application. The company wants to minimize latency and perform compute operations for the application as close to end users as possible. Which AWS service or infrastructure component will provide this functionality?",
+        "options": {
+            "A": "AWS Regions",
+            "B": "Availability Zones",
+            "C": "Edge locations",
+            "D": "AWS Direct Connect"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " Edge locations are sites that Amazon CloudFront uses to cache copies of your content for faster delivery to users at any location. You can use Amazon CloudFront to deliver your entire website, including dynamic, static, streaming, and interactive content using a global network of edge locations. Requests for your content are automatically routed to the nearest edge location, so content is delivered with the best possible performance3. Edge locations can also host AWS Lambda functions to perform compute operations for your web application as close to end users as possible4."
+    },
+    {
+        "id": 224,
+        "question": "A company needs a graph database service that is scalable and highly available. Which AWS service meets these requirements?",
+        "options": {
+            "A": "Amazon Aurora",
+            "B": "Amazon Redshift",
+            "C": "Amazon DynamoDB",
+            "D": "Amazon Neptune"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " The AWS service that meets the requirements of providing a graph database service that is scalable and highly available is Amazon Neptune. Amazon Neptune is a fast, reliable, and fully managed graph database service that supports property graph and RDF graph models. Amazon Neptune is designed to store billions of relationships and query the graph with milliseconds latency. Amazon Neptune also offers high availability and durability by replicating six copies of the data across three Availability Zones and continuously backing up the data to Amazon S35. Amazon Aurora, Amazon Redshift, and Amazon DynamoDB are other AWS services that provide relational or non- relational database solutions, but they do not support graph database models."
+    },
+    {
+        "id": 225,
+        "question": "Which AWS service or tool helps users visualize, understand, and manage spending and usage over time?",
+        "options": {
+            "A": "AWS Organizations",
+            "B": "AWS Pricing Calculator",
+            "C": "AWS Cost Explorer",
+            "D": "AWS Service Catalog"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS Cost Explorer is the AWS service or tool that helps users visualize, understand, and manage spending and usage over time. AWS Cost Explorer is a web- based interface that allows users to access interactive graphs and tables that display their AWS costs and usage data. Users can create custom reports that analyze cost and usage data by various dimensions, such as service, region, account, tag, and more. Users can also view historical data for up to the last 12 months, forecast future costs for up to the next 12 months, and get recommendations for cost optimization. AWS Cost Explorer also provides preconfigured views that show common cost and usage scenarios, such as monthly spend by service, daily spend by linked account, and Reserved Instance utilization. Users can use AWS Cost Explorer to monitor their AWS spending and usage trends, identify cost drivers and anomalies, and optimize their resource allocation and budget planning. References: Cloud Cost Analysis - AWS Cost Explorer - AWS, Analyzing your costs with AWS Cost Explorer"
+    },
+    {
+        "id": 226,
+        "question": "A company wants to set up a high-speed connection between its data center and its applications that run on AWS. The company must not transfer data over the internet. Which action should the company take to meet these requirements?",
+        "options": {
+            "A": "Transfer data to AWS by using AWS Snowball.",
+            "B": "Transfer data to AWS by using AWS Storage Gateway.",
+            "C": "Set up a VPN connection between the data center and an AWS Region.",
+            "D": "Set up an AWS Direct Connect connection between the company network and AWS."
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from a customer’s premises to AWS. AWS Direct Connect does not involve the public internet, and therefore can reduce network costs, increase bandwidth throughput, and provide a more consistent network experience than internet-based connections. AWS Snowball is a petabyte-scale data transport service that uses secure devices to transfer large amounts of data into and out of the AWS Cloud. AWS Storage Gateway is a hybrid cloud storage service that gives customers on-premises access to virtually unlimited cloud storage. A VPN connection enables customers to establish a secure and private connection between their network and AWS."
+    },
+    {
+        "id": 227,
+        "question": "Which VPC component provides a layer of security at the subnet level?",
+        "options": {
+            "A": "Security groups",
+            "B": "Network ACLs",
+            "C": "NAT gateways",
+            "D": "Route tables"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Network ACLs are a feature that provide a layer of security at the subnet level by acting as a firewall to control traffic in and out of one or more subnets. Network ACLs can be configured with rules that allow or deny traffic based on the source and destination IP addresses, ports, and protocols5. Security groups are a feature that provide a layer of security at the instance level by acting as a firewall to control traffic to and from one or more instances. Security groups can be configured with rules that allow or deny traffic based on the source and destination IP addresses, ports, protocols, and security groups. NAT gateways are a feature that enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating a connection with those instances. Route tables are a feature that determine where network traffic from a subnet or gateway is directed."
+    },
+    {
+        "id": 228,
+        "question": "Which database engines does Amazon Aurora support? (Select TWO.)",
+        "options": {
+            "A": "Oracle",
+            "B": "Microsoft SQL Server",
+            "C": "MySQL",
+            "D": "PostgreSQL",
+            "E": "MongoDB"
+        },
+        "correct_answers": [
+            "C",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " Amazon Aurora is a relational database service that is compatible with MySQL and PostgreSQL engines. It delivers up to five times the performance of MySQL and up to three times the performance of PostgreSQL. It also provides high availability, scalability, security, and durability1"
+    },
+    {
+        "id": 229,
+        "question": "Which AWS Cloud benefit describes the ability to acquire resources as they are needed and release resources when they are no longer needed?",
+        "options": {
+            "A": "Economies of scale",
+            "B": "Elasticity",
+            "C": "Agility",
+            "D": "Security"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " The AWS Cloud benefit that describes the ability to acquire resources as they are needed and release resources when they are no longer needed is elasticity. Elasticity means that users can quickly add and remove resources to match the demand of their applications, and only pay for what they use. Elasticity enables users to handle unpredictable workloads, reduce costs, and improve performance1. Economies of scale, agility, and security are other benefits of the AWS Cloud, but they do not describe the specific ability of acquiring and releasing resources on demand."
+    },
+    {
+        "id": 230,
+        "question": "A company wants to manage its AWS Cloud resources through a web interface. Which AWS service will meet this requirement?",
+        "options": {
+            "A": "AWS Management Console",
+            "B": "AWS CLI",
+            "C": "AWS SDK",
+            "D": "AWS Cloud"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Management Console is a web application that allows you to manage and monitor your AWS Cloud resources through a user-friendly interface. You can use the AWS Management Console to access and experiment with over 150 AWS services, view and modify your account and billing information, get in-console help from AWS Support, and customize your dashboard with widgets that display key metrics and information for your applications567. You can also use the AWS Management Console to launch and configure AWS resources using wizards and templates, without writing any code5. References: 5: Manage AWS Resources - AWS Management Console -AWS, 6: Getting Started with the AWS Management Console, 7: Manage AWS Resources - AWS Management Console Features - AWS"
+    },
+    {
+        "id": 231,
+        "question": "A customer runs an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. For how much time will the customer be billed?",
+        "options": {
+            "A": "3 hours, 5 minutes",
+            "B": "3 hours, 5 minutes, and 6 seconds",
+            "C": "3 hours, 6 minutes",
+            "D": "4 hours"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " Amazon EC2 usage is calculated by either the hour or the second based on the size of the instance, operating system, and the AWS Region where the instances are launched. Pricing is per instance-hour consumed for each instance, from the time an instance is launched until it’s terminated or stopped. Each partial instance-hour consumed is billed per-second for Linux instances and as a full hour for all other instance types1. Therefore, the customer will be billed for 3 hours and 6 minutes for running an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. References: Understand Amazon EC2 instance- hours billing"
+    },
+    {
+        "id": 232,
+        "question": "A company deployed an Amazon EC2 instance last week. A developer realizes that the EC2 instance is no longer running. The developer reviews a list of provisioned EC2 instances, and the EC2 instance is no longer on the list. What can the developer do to generate a recent history of the EC2 instance?",
+        "options": {
+            "A": "Run Cost Explorer to identify the start time and end time of the EC2 instance.",
+            "B": "Use Amazon Inspector to find out when the EC2 instance was stopped.",
+            "C": "Perform a search in AWS CloudTrail to find all EC2 instance-related events.",
+            "D": "Use AWS Secrets Manager to display hidden termination logs of the EC2 instance."
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of a customer’s AWS account. AWS CloudTrail allows customers to track user activity and API usage across their AWS infrastructure. AWS CloudTrail can also provide a history of EC2 instance events, such as launch, stop, terminate, and reboot. Cost Explorer is a tool that enables customers to visualize, understand, and manage their AWS costs and usage over time. Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. AWS Secrets Manager helps customers protect secrets needed to access their applications, services, and IT resources."
+    },
+    {
+        "id": 233,
+        "question": "Which option is a pillar of the AWS Well-Architected Framework?",
+        "options": {
+            "A": "Patch management",
+            "B": "Cost optimization",
+            "C": "Business technology strategy",
+            "D": "Physical and environmental controls"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " The AWS Well-Architected Framework helps you understand the pros and cons of decisions you make while building systems on AWS. By using the Framework, you will learn architectural best practices for designing and operating reliable, secure, efficient, and cost-effective systems in the cloud. The Framework consists of five pillars: operational excellence, security, reliability, performance efficiency, and cost optimization2."
+    },
+    {
+        "id": 234,
+        "question": "A company needs help managing multiple AWS linked accounts that are reported on a consolidated bill. Which AWS Support plan includes an AWS concierge whom the company can ask for assistance?",
+        "options": {
+            "A": "AWS Developer Support",
+            "B": "AWS Enterprise Support",
+            "C": "AWS Business Support",
+            "D": "AWS Basic Support"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS Enterprise Support is the AWS Support plan that includes an AWS concierge whom the company can ask for assistance. According to the AWS Support Plans page, AWS Enterprise Support provides \"a dedicated Technical Account Manager (TAM) who provides advocacy and guidance to help plan and build solutions using best practices, coordinate access to subject matter experts, and proactively keep your AWS environment operationally healthy.\"2 AWS Business Support, AWS Developer Support, and AWS Basic Support do not include a TAM or a concierge service."
+    },
+    {
+        "id": 235,
+        "question": "A company has multiple AWS accounts that include compute workloads that cannot be interrupted. The company wants to obtain billing discounts that are based on the company's use of AWS services. Which AWS feature or purchasing option will meet these requirements?",
+        "options": {
+            "A": "Resource tagging",
+            "B": "Consolidated billing",
+            "C": "Pay-as-you-go pricing",
+            "D": "Spot Instances"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Consolidated billing is an AWS feature that allows users to combine the usage and costs of multiple AWS accounts into a single bill. This enables users to obtain billing discounts that are based on the company’s use of AWS services, such as volume pricing tiers, Reserved Instance discounts, and Savings Plans discounts5. Resource tagging is an AWS feature that allows users to assign metadata to AWS resources, such as EC2 instances, S3 buckets, and Lambda functions. This enables users to organize, track, and manage their AWS resources, such as filtering, grouping, and reporting. Pay-as-you- go pricing is an AWS pricing model that allows users to pay only for the resources and services they use, without any upfront or long-term commitments. This enables users to lower their costs by scaling up or down as needed, and avoiding over-provisioning or under-utilization. Spot Instances are spare EC2 instances that are available at up to 90% discount compared to On-Demand prices. They are suitable for workloads that can tolerate interruptions, such as batch processing, data analysis, and testing. Spot Instances are allocated based on the current supply and demand, and can be reclaimed by AWS with a two-minute notice when the demand exceeds the supply."
+    },
+    {
+        "id": 236,
+        "question": "A company does not want to rely on elaborate forecasting to determine its usage of compute resources. Instead, the company wants to pay only for the resources that it uses. The company also needs the ability to increase or decrease its resource usage to meet business requirements. Which pillar of the AWS Well-Architected Framework aligns with these requirements?",
+        "options": {
+            "A": "Operational excellence",
+            "B": "Security",
+            "C": "Reliability",
+            "D": "Cost optimization"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " Cost optimization is the pillar of the AWS Well-Architected Framework that aligns with the requirements of not relying on elaborate forecasting and paying only for the resources that are used. The cost optimization pillar focuses on the ability of a system to deliver business value at the lowest price point. Cost optimization involves using the right AWS services and resources for the workload, measuring and monitoring the cost and usage, and continuously improving the cost efficiency. Cost optimization also leverages the benefits of the AWS Cloud, such as pay-as-you-go pricing, elasticity, and scalability. For more information, see [Cost Optimization Pillar] and [Cost Optimization]."
+    },
+    {
+        "id": 237,
+        "question": "A company is setting up AWS Identity and Access Management (IAM) on an AWS account. Which recommendation complies with IAM security best practices?",
+        "options": {
+            "A": "Use the account root user access keys for administrative tasks.",
+            "B": "Grant broad permissions so that all company employees can access the resources they need.",
+            "C": "Turn on multi-factor authentication (MFA) for added security during the login process.",
+            "D": "Avoid rotating credentials to prevent issues in production applications."
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " C is correct because turning on multi-factor authentication (MFA) for added security during the login process is one of the IAM security best practices recommended by AWS. MFA adds an extra layer of protection on top of the user name and password, making it harder for attackers to access the AWS account. A is incorrect because using the account root user access keys for administrative tasks is not a good practice, as the root user has full access to all the resources in the AWS account and can cause irreparable damage if compromised. AWS recommends creating individual IAM users with the least privilege principle and using roles for applications that run on Amazon EC2 instances. B is incorrect because granting broad permissions so that all company employees can access the resources they need is not a good practice, as it increases the risk of unauthorized or accidental actions on the AWS resources. AWS recommends granting only the permissions that are required to perform a task and using groups to assign permissions to IAM users. D is incorrect because avoiding rotating credentials to prevent issues in production applications is not a good practice, as it increases the risk of credential leakage or compromise. AWS recommends rotating credentials regularly and using temporary security credentials from AWS STS when possible."
+    },
+    {
+        "id": 238,
+        "question": "A company is using AWS Organizations to configure AWS accounts. A company is planning its migration to the AWS Cloud. The company is identifying its capability gaps by using the AWS Cloud Adoption Framework (AWS CAF) perspectives. Which phase of the cloud transformation journey includes these identification activities?",
+        "options": {
+            "A": "Envision",
+            "B": "Align",
+            "C": "Scale",
+            "D": "Launch"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " The Envision phase of the cloud transformation journey is where the company defines its vision, business drivers, and desired outcomes for the cloud adoption. The company also identifies its capability gaps by using the AWS Cloud Adoption Framework (AWS CAF) perspectives, which are business, people, governance, platform, security, and operations2."
+    },
+    {
+        "id": 239,
+        "question": "A company is running an application on AWS. The company wants to identify and prevent the accidental Which AWS service or feature will meet these requirements?",
+        "options": {
+            "A": "Amazon GuardDuty",
+            "B": "Network ACL",
+            "C": "AWS WAF",
+            "D": "AWS Network Firewall"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts, workloads, and data stored in Amazon S3. With the cloud, the collection and aggregation of account and network activities is simplified, but it can be time consuming for security teams to continuously analyze event log data for potential threats. With GuardDuty, you can automate anomaly detection and get actionable findings to help you protect your AWS resources4."
+    },
+    {
+        "id": 240,
+        "question": "What is an AWS responsibility under the AWS shared responsibility model?",
+        "options": {
+            "A": "Configure the security group rules that determine which ports are open on an Amazon EC2 Linux instance.",
+            "B": "Ensure the security of the internal network in the AWS data centers.",
+            "C": "Patch the guest operating system with the latest security patches on Amazon EC2.",
+            "D": "Turn on server-side encryption for Amazon S3 buckets.A company wants to deploy its critical application on AWS and maintain high availability."
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Under the AWS shared responsibility model, AWS is responsible for ensuring the security of the internal network in the AWS data centers, as well as the physical security of the hardware and facilities that run AWS services. AWS customers are responsible for configuring the security group rules that determine which ports are open on an EC2 Linux instance, patching the guest operating system with the latest security patches on EC2, and turning on server-side encryption for S3 buckets. Source: AWS Shared Responsibility Model"
+    },
+    {
+        "id": 241,
+        "question": "A company must store call recordings for 6 years. The storage system should be highly durable and cost-effective. Which AWS service meets these requirements?",
+        "options": {
+            "A": "AWS Snowball",
+            "B": "Amazon S3",
+            "C": "AWS Storage Gateway",
+            "D": "Amazon Kinesis"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Amazon S3 is a service that provides highly durable and cost-effective object storage for a variety of use cases, including backup and archive, big data analytics, disaster recovery, and cloud applications. Amazon S3 offers 99.999999999% (11 9’s) of durability, meaning that data is designed to withstand the loss of two facilities concurrently. Amazon S3 also offers several storage classes with different price and performance characteristics, such as S3 Glacier and S3 Glacier Deep Archive, which are ideal for long- term archival of data that is rarely accessed. AWS Snowball, AWS Storage Gateway, and Amazon Kinesis are not designed to provide the same level of durability and cost- effectiveness as Amazon S3 for storing call recordings for 6 years. Source: Amazon S3"
+    },
+    {
+        "id": 242,
+        "question": "A company needs to launch an Amazon EC2 instance. Which of the following can the company use during the launch process to configure the root volume of the EC2 instance?",
+        "options": {
+            "A": "Amazon EC2 Auto Scaling",
+            "B": "Amazon Data Lifecycle Manager (Amazon DLM)",
+            "C": "Amazon Machine Image (AMI)",
+            "D": "Amazon Elastic Block Store (Amazon EBS) volume"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " Amazon Machine Image (AMI) is the option that the company can use during the launch process to configure the root volume of the EC2 instance. An AMI is a template that contains the software configuration, such as the operating system, applications, and settings, required to launch an EC2 instance. An AMI also specifies the volume size and type of the root device for the instance. The company can choose an AMI provided by AWS, the AWS Marketplace, or the AWS community, or create a custom AMI. For more information, see [Amazon Machine Images (AMI)] and [Launching an Instance Using the Launch Instance Wizard]."
+    },
+    {
+        "id": 243,
+        "question": "A new AWS user who has little cloud experience wants to build an application by using AWS services. The user wants to learn how to implement specific AWS services from other customer examples. The user also wants to ask questions to AWS experts. Which AWS service or resource will meet these requirements?",
+        "options": {
+            "A": "AWS Online Tech Talks",
+            "B": "AWS documentation",
+            "C": "AWS Marketplace",
+            "D": "AWS Health Dashboard"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " AWS Online Tech Talks are online presentations that cover a broad range of topics at varying technical levels and provide a live Q&A session with AWS experts. They are a great resource for new AWS users who want to learn how to implement specific AWS services from other customer examples and ask questions to AWS experts. AWS documentation, AWS Marketplace, and AWS Health Dashboard do not offer the same level of interactivity and guidance as AWS Online Tech Talks. Source: AWS Online Tech Talks"
+    },
+    {
+        "id": 244,
+        "question": "A company provides a software as a service (SaaS) application. The company has a new customer that is based in a different country. The new customer's data needs to be hosted in that country. Which AWS service or infrastructure component should the company use to meet this requirement?",
+        "options": {
+            "A": "AWS Shield",
+            "B": "Amazon S3 Object Lock",
+            "C": "AWS Regions",
+            "D": "Placement groups"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS Regions are geographic areas around the world where AWS has clusters of data centers. Each AWS Region consists of multiple, isolated, and physically separate AZ’s within a geographic area. By hosting the customer’s data in a specific AWS Region, the company can meet the requirement of hosting the data in the customer’s country. AWS Shield is a service that provides always-on detection and automatic inline mitigations that minimize application downtime and latency, so there is no need to engage AWS Support to benefit from DDoS protection. Amazon S3 Object Lock is a feature that allows you to store objects using a write-once-read-many (WORM) model. You can use it to prevent an object from being deleted or overwritten for a fixed amount of time or indefinitely. Placement groups are logical grouping of instances within a single Availability Zone. Placement groups enable applications to participate in a low-latency, 10 Gbps network. None of these services or infrastructure components can help the company host the customer’s data in a different country."
+    },
+    {
+        "id": 245,
+        "question": "A company needs a repository that stores source code. The company needs a way to update the running software when the code changes. Which combination of AWS services will meet these requirements? (Select TWO.)",
+        "options": {
+            "A": "AWS CodeCommit",
+            "B": "AWS CodeDeploy",
+            "C": "Amazon DynamoDB",
+            "D": "Amazon S3",
+            "E": "Amazon Elastic Container Service (Amazon ECS)"
+        },
+        "correct_answers": [
+            "A",
+            "B"
+        ],
+        "type": "multiple",
+        "explanation": " A and B are correct because AWS CodeCommit is the AWS service that provides a fully managed source control service that hosts secure Git-based repositories1, and AWS CodeDeploy is the AWS service that automates code deployments to any instance, including Amazon EC2 instances and servers running on-premises2. These two services can be used together to store source code and update the running software when the code changes. C is incorrect because Amazon DynamoDB is the AWS service that provides a fully managed NoSQL database service that supports key-value and document data models3. It is not related to storing source code or updating software. D is incorrect because Amazon S3 is the AWS service that provides object storage through a web service interface4. It can be used to store source code, but it does not provide source control features or update software. E is incorrect because Amazon Elastic Container Service (Amazon ECS) is the AWS service that allows users to run, scale, and secure Docker container applications. It can be used to deploy containerized software, but it does not store source code or update software."
+    },
+    {
+        "id": 246,
+        "question": "What is a characteristic of Convertible Reserved Instances (RIs)?",
+        "options": {
+            "A": "Users can exchange Convertible RIs for other Convertible RIs from a different instance family.",
+            "B": "Users can exchange Convertible RIs for other Convertible RIs in different AWS Regions.",
+            "C": "Users can sell and buy Convertible RIs on the AWS Marketplace.",
+            "D": "Users can shorten the term of their Convertible RIs by merging them with other Convertible RIs."
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Convertible Reserved Instances (RIs) are a type of Reserved Instance that allow you to change the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value. You can exchange Convertible RIs for other Convertible RIs from a different instance family, size, platform, tenancy, or scope (Region or Availability Zone)3."
+    },
+    {
+        "id": 247,
+        "question": "Which aspect of security is the customer's responsibility, according to the AWS shared responsibility model?",
+        "options": {
+            "A": "Patch and configuration management",
+            "B": "Service and communications protection or zone security",
+            "C": "Physical and environmental controls",
+            "D": "Awareness and training"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " According to the AWS shared responsibility model, AWS is responsible for the security of the cloud, while the customer is responsible for the security in the cloud. This means that AWS provides the physical and environmental controls, the service and communications protection, and the awareness and training for its employees, while the customer provides the patch and configuration management, the identity and access management, the data encryption, and the firewall configuration for its resources3."
+    },
+    {
+        "id": 248,
+        "question": "A company has an AWS-hosted website located behind an Application Load Balancer. The company wants to safeguard the website from SQL injection or cross- site scripting. Which AWS service should the company use?",
+        "options": {
+            "A": "Amazon GuardDuty",
+            "B": "AWS WAF",
+            "C": "AWS Trusted Advisor",
+            "D": "Amazon Inspector"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " The company should use AWS WAF to safeguard the website from SQL injection or cross-site scripting. AWS WAF is a web application firewall that helps protect web applications from common web exploits that could affect availability, compromise security, or consume excessive resources. The company can use AWS WAF to create custom rules that block malicious requests that match certain patterns, such as SQL injection or cross-site scripting. AWS WAF can be applied to web applications that are behind an Application Load Balancer, Amazon CloudFront, or Amazon API Gateway. Amazon GuardDuty, AWS Trusted Advisor, and Amazon Inspector are not the best services to use for this purpose. Amazon GuardDuty is a threat detection service that monitors for malicious activity and unauthorized behavior across the AWS accounts and resources. AWS Trusted Advisor is a service that provides best practice recommendations for cost optimization, performance, security, and fault tolerance. Amazon Inspector is a service that assesses the security and compliance of applications running on Amazon EC2 instances12"
+    },
+    {
+        "id": 249,
+        "question": "A company wants to implement controls (guardrails) in a newly created AWS Control Tower landing zone. Which AWS services or features can the company use to create and define these controls (guardrails)? (Select TWO.)",
+        "options": {
+            "A": "AWS Config",
+            "B": "Service control policies (SCPs)",
+            "C": "Amazon GuardDuty",
+            "D": "AWS Identity and Access Management (IAM)",
+            "E": "Security groups"
+        },
+        "correct_answers": [
+            "A",
+            "B"
+        ],
+        "type": "multiple",
+        "explanation": " AWS Config and service control policies (SCPs) are AWS services or features that the company can use to create and define controls (guardrails) in a newly created AWS Control Tower landing zone. AWS Config is a service that enables users to assess, audit, and evaluate the configurations of their AWS resources. It can be used to create rules that check for compliance with the desired configurations and report any deviations. AWS Control Tower provides a set of predefined AWS Config rules that can be enabled as guardrails to enforce compliance across the landing zone1. Service control policies (SCPs) are a type of policy that can be used to manage permissions in AWS Organizations. They can be used to restrict the actions that the users and roles in the member accounts can perform on the AWS resources. AWS Control Tower provides a set of predefined SCPs that can be enabled as guardrails to prevent access to certain services or regions across the landing zone2. Amazon GuardDuty is a service that provides intelligent threat detection and continuous monitoring for AWS accounts and resources. It is not a feature that can be used to create and define controls (guardrails) in a landing zone. AWS Identity and Access Management (IAM) is a service that allows users to manage access to AWS resources and services. It can be used to create users, groups, roles, and policies that control who can do what in AWS. It is not a feature that can be used to create and define controls (guardrails) in a landing zone. Security groups are virtual firewalls that control the inbound and outbound traffic for Amazon EC2 instances. They can be used to allow or deny access to an EC2 instance based on the port, protocol, and source or destination. They are not a feature that can be used to create and define controls (guardrails) in a landing zone."
+    },
+    {
+        "id": 250,
+        "question": "A company is using Amazon RDS. A company is launching a critical business application in an AWS Region. How can the company increase resilience for this application?",
+        "options": {
+            "A": "Deploy a copy of the application in another AWS account.",
+            "B": "Deploy the application by using multiple VPCs.",
+            "C": "Deploy the application by using multiple subnets.",
+            "D": "Deploy the application by using multiple Availability Zones."
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " Deploying the application by using multiple Availability Zones is the best way to increase resilience for the application. According to the Amazon RDS User Guide, \"Amazon RDS provides high availability and failover support for DB instances using Multi- AZ deployments. In a Multi-AZ deployment, Amazon RDS automatically provisions and maintains a synchronous standby replica in a different Availability Zone. The primary DB instance is synchronously replicated across Availability Zones to a standby replica to provide data redundancy, eliminate I/O freezes, and minimize latency spikes during system backups.4 Deploying a copy of the\" application in another AWS account, using multiple VPCs, or using multiple subnets do not provide the same level of resilience as using multiple Availability Zones."
+    },
+    {
+        "id": 251,
+        "question": "A company is building an application that will receive millions of database queries each second. The company needs the data store for the application to scale to meet these needs. Which AWS service will meet this requirement?",
+        "options": {
+            "A": "Amazon DynamoDB",
+            "B": "AWS Cloud9",
+            "C": "Amazon ElastiCache for Memcached",
+            "D": "Amazon Neptune"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Amazon DynamoDB is the AWS service that will meet the requirement of building an application that will receive millions of database queries each second. Amazon DynamoDB is a fully managed NoSQL database service that provides fast and consistent performance, scalability, and durability. Amazon DynamoDB can handle any level of request traffic and automatically scale up or down the capacity based on the demand. Amazon DynamoDB also supports in-memory caching with Amazon DynamoDB Accelerator (DAX) to improve the response time and reduce the cost. For more information, see What is Amazon DynamoDB? and Amazon DynamoDB Features."
+    },
+    {
+        "id": 252,
+        "question": "A company migrated its core application onto multiple workloads in the AWS Cloud. The company wants to improve the application's reliability. Which cloud design principle should the company implement to achieve this goal?",
+        "options": {
+            "A": "Maximize utilization.",
+            "B": "Decouple the components.",
+            "C": "Rightsize the resources.",
+            "D": "Adopt a consumption model."
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Decoupling the components of an application means reducing the dependencies and interactions between them, which can improve the application’s reliability, scalability, and performance. Decoupling can be achieved by using services such as Amazon Simple Queue Service (Amazon SQS), Amazon Simple Notification Service (Amazon SNS), and AWS Lambda1"
+    },
+    {
+        "id": 253,
+        "question": "A company wants to create a chatbot and integrate the chatbot with its current web application. Which AWS service will meet these requirements?",
+        "options": {
+            "A": "AmazonKendra",
+            "B": "Amazon Lex",
+            "C": "AmazonTextract",
+            "D": "AmazonPolly"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " The AWS service that will meet the requirements of the company that wants to create a chatbot and integrate the chatbot with its current web application is Amazon Lex. Amazon Lex is a service that helps customers build conversational interfaces using voice and text. The company can use Amazon Lex to create a chatbot that can understand natural language and respond to user requests, using the same deep learning technologies that power Amazon Alexa. Amazon Lex also provides easy integration with other AWS services, such as Amazon Comprehend, Amazon Polly, and AWS Lambda, as well as popular platforms, such as Facebook Messenger, Slack, and Twilio. Amazon Lex helps customers create engaging and interactive chatbots for their web applications. Amazon Kendra, Amazon Textract, and Amazon Polly are not the best services to use for this purpose. Amazon Kendra is a service that helps customers provide accurate and natural answers to natural language queries using machine learning. Amazon Textract is a service that helps customers extract text and data from scanned documents using optical character recognition (OCR) and machine learning. Amazon Polly is a service that helps customers convert text into lifelike speech using deep learning. These services are more useful for different types of natural language processing and generation tasks, rather than creating and integrating chatbots."
+    },
+    {
+        "id": 254,
+        "question": "Which tasks are the responsibility of AWS according to the AWS shared responsibility model? (Select TWO.)",
+        "options": {
+            "A": "Configure AWS Identity and Access Management (IAM).",
+            "B": "Configure security groups on Amazon EC2 instances.",
+            "C": "Secure the access of physical AWS facilities.",
+            "D": "Patch applications that run on Amazon EC2 instances.",
+            "E": "Perform infrastructure patching and maintenance."
+        },
+        "correct_answers": [
+            "C",
+            "E"
+        ],
+        "type": "multiple",
+        "explanation": " The tasks that are the responsibility of AWS according to the AWS shared responsibility model are securing the access of physical AWS facilities and performing infrastructure patching and maintenance. The AWS shared responsibility model defines the division of responsibilities between AWS and the customer for security and compliance. AWS is responsible for the security of the cloud, which includes the physical security of the hardware, software, networking, and facilities that run the AWS services. AWS is also responsible for the maintenance and patching of the infrastructure that supports the AWS services. The customer is responsible for the security in the cloud, which includes the configuration and management of the AWS resources and applications that they use. Configuring AWS Identity and Access Management (IAM), configuring security groups on Amazon EC2 instances, and patching applications that run on Amazon EC2 instances are tasks that are the responsibility of the customer, not AWS."
+    },
+    {
+        "id": 255,
+        "question": "Which design principle is included in the operational excellence pillar of the AWS Well- Architected Framework?",
+        "options": {
+            "A": "Create annotated documentation.",
+            "B": "Anticipate failure.",
+            "C": "Ensure performance efficiency.",
+            "D": "Optimize costs."
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Create annotated documentation is the design principle that is included in the operational excellence pillar of the AWS Well-Architected Framework. According to the AWS Well-Architected Framework whitepaper, creating annotated documentation means \"documenting your workload so that the team understands the architecture, how to operate the workload, and how the workload delivers value to customers.\"3 Anticipate failure, ensure performance efficiency, and optimize costs are design principles that belong to other pillars of the AWS Well-Architected Framework, such as reliability, performance efficiency, and cost optimization."
+    },
+    {
+        "id": 256,
+        "question": "A company wants to push VPC Flow Logs to an Amazon S3 bucket. A company wants to optimize long-term compute costs of AWS Lambda functions and Amazon EC2 instances. Which AWS purchasing option should the company choose to meet these requirements?",
+        "options": {
+            "A": "Dedicated Hosts",
+            "B": "Compute Savings Plans",
+            "C": "Reserved Instances",
+            "D": "Spot Instances"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Compute Savings Plans are a flexible and cost-effective way to optimize long-term compute costs of AWS Lambda functions and Amazon EC2 instances. With Compute Savings Plans, customers can commit to a consistent amount of compute usage (measured in $/hour) for a 1-year or 3-year term and receive a discount of up to 66% compared to On-Demand prices3. Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to the customer’s use. They are suitable for customers who have specific server-bound software licenses or compliance requirements4. Reserved Instances are a pricing model that provides a significant discount (up to 75%) compared to On-Demand pricing and a capacity reservation for EC2 instances. They are available in 1-year or 3-year terms and different payment options5. Spot Instances are spare EC2 instances that are available at up to 90% discount compared to On-Demand prices. They are suitable for customers who have flexible start and end times, can withstand interruptions, and can handle excess capacity."
+    },
+    {
+        "id": 257,
+        "question": "A company wants to run its production workloads on AWS. The company needs concierge service, a designated AWS technical account manager (TAM), and technical support that is available 24 hours a day, 7 days a week. Which AWS Support plan will meet these requirements?",
+        "options": {
+            "A": "AWS Basic Support",
+            "B": "AWS Enterprise Support",
+            "C": "AWS Business Support",
+            "D": "AWS Developer Support"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " B is correct because AWS Enterprise Support is the AWS Support plan that provides concierge service, a designated AWS technical account manager (TAM), and technical support that is available 24 hours a day, 7 days a week. This plan is designed for customers who run mission-critical workloads on AWS and need the highest level of support. A is incorrect because AWS Basic Support is the AWS Support plan that provides customer service and support for billing and account issues, service limit increases, and technical support for a limited set of AWS services. It does not provide concierge service, a designated TAM, or 24/7 technical support. C is incorrect because AWS Business Support is the AWS Support plan that provides customer service and support for billing and account issues, service limit increases, and technical support for all AWS services, as well as access to AWS Trusted Advisor and AWS Support API. It does not provide concierge service or a designated TAM. D is incorrect because AWS Developer Support is the AWS Support plan that provides customer service and support for billing and account issues, service limit increases, and technical support for all AWS services, as well as access to AWS Trusted Advisor. It does not provide concierge service, a designated TAM, or 24/7 technical support."
+    },
+    {
+        "id": 258,
+        "question": "A company wants to access a report about the estimated environmental impact of the company's AWS usage. Which AWS service or feature should the company use to meet this requirement?",
+        "options": {
+            "A": "AWS Organizations",
+            "B": "IAM policy",
+            "C": "AWS Billing console",
+            "D": "Amazon Simple Notification Service (Amazon SNS)"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " The company should use the AWS Billing console to access a report about the estimated environmental impact of the company’s AWS usage. The AWS Billing console provides customers with various tools and reports to manage and monitor their AWS costs and usage. One of the reports available in the AWS Billing console is the AWS Sustainability Dashboard, which shows the estimated carbon footprint and energy mix of the customer’s AWS usage. The company can use this dashboard to measure and improve the sustainability of their cloud workloads. AWS Organizations, IAM policy, and Amazon Simple Notification Service (Amazon SNS) are not services or features that can provide a report about the estimated environmental impact of the company’s AWS usage. AWS Organizations is a service that enables customers to centrally manage and govern their AWS accounts. IAM policy is a document that defines the permissions for an IAM identity (user, group, or role) or an AWS resource. Amazon SNS is a fully managed pub/sub messaging service that enables customers to send messages to subscribers or other AWS services."
+    },
+    {
+        "id": 259,
+        "question": "A company wants to use Amazon EC2 instances for a stable production workload that will run for 1 year. Which instance purchasing option meets these requirements MOST cost-effectively?",
+        "options": {
+            "A": "Dedicated Hosts",
+            "B": "Reserved Instances",
+            "C": "On-Demand Instances",
+            "D": "Spot Instances"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " B is correct because Reserved Instances are the instance purchasing option that offers the most cost-effective way to use Amazon EC2 instances for a stable production workload that will run for 1 year, as they provide significant discounts compared to On-Demand Instances in exchange for a commitment to use a specific amount of computing power for a period of time. A is incorrect because Dedicated Hosts are the instance purchasing option that allows customers to use physical servers that are fully dedicated to their use, which is more expensive and less flexible than Reserved Instances. C is incorrect because On-Demand Instances are the instance purchasing option that allows customers to pay for compute capacity by the hour or second with no long-term commitments, which is more suitable for short-term, variable, and unpredictable workloads. D is incorrect because Spot Instances are the instance purchasing option that allows customers to bid on spare Amazon EC2 computing capacity, which is more suitable for flexible, scalable, and fault-tolerant workloads that can tolerate interruptions."
+    },
+    {
+        "id": 260,
+        "question": "Who is responsible for decommissioning end-of-life underlying storage devices that are used to host data on AWS?",
+        "options": {
+            "A": "Customer",
+            "B": "AWS",
+            "C": "Account creator",
+            "D": "Auditing team"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " AWS is responsible for decommissioning end-of-life underlying storage devices that are used to host data on AWS. AWS follows strict and audited data destruction processes to ensure that customer data is not exposed to unauthorized individuals or devices when an AWS storage device reaches the end of its useful life. AWS uses techniques detailed in DoD 5220.22-M (“National Industrial Security Program Operating Manual”) or NIST 800-88 (“Guidelines for Media Sanitization”) to destroy data as part of the decommissioning process3."
+    },
+    {
+        "id": 261,
+        "question": "Which AWS features will meet these requirements? (Select TWO.)",
+        "options": {
+            "A": "Security groups",
+            "B": "Network ACLs",
+            "C": "S3 bucket policies",
+            "D": "IAM user policies",
+            "E": "S3 bucket versioning"
+        },
+        "correct_answers": [
+            "C",
+            "D"
+        ],
+        "type": "multiple",
+        "explanation": " The correct answers are C and D because S3 bucket policies and IAM user policies are AWS features that will meet the requirements. S3 bucket policies are access policies that can be attached to Amazon S3 buckets to grant or deny permissions to the bucket and the objects it contains. S3 bucket policies can be used to control who has permission to read, write, or delete objects that the company stores in the S3 bucket. IAM user policies are access policies that can be attached to IAM users to grant or deny permissions to AWS resources and actions. IAM user policies can be used to control who has permission to read, write, or delete objects that the company stores in the S3 bucket. The other options are incorrect because they are not AWS features that will meet the requirements. Security groups and network ACLs are AWS features that act as firewalls to control inbound and outbound traffic to and from Amazon EC2 instances and subnets. Security groups and network ACLs do not control who has permission to read, write, or delete objects that the company stores in the S3 bucket. S3 bucket versioning is an AWS feature that enables users to keep multiple versions of the same object in the same bucket. S3 bucket versioning can be used to recover from accidental overwrites or deletions of objects, but it does not control who has permission to read, write, or delete objects that the company stores in the S3 bucket. Reference: Using Bucket Policies and User Policies, Security Groups for Your VPC, Network ACLs, [Using Versioning]"
+    },
+    {
+        "id": 262,
+        "question": "What is an Availability Zone?",
+        "options": {
+            "A": "A location where users can deploy compute, storage, database, and other select AWS serviceswhere no AWS Region currently exists",
+            "B": "One or more discrete data centers with redundant power, networking, and connectivity",
+            "C": "One or more clusters of servers where new workloads can be deployed",
+            "D": "A fast content delivery network (CDN) service that securely delivers data, videos, applications, andAPIs to users globally"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " An Availability Zone is one or more discrete data centers with redundant power, networking, and connectivity. Availability Zones are part of the AWS global infrastructure, which consists of AWS Regions, Availability Zones, and edge locations. Availability Zones are physically separate locations within an AWS Region that are engineered to be isolated from failures and connected by low-latency, high-throughput, and highly redundant networking. Each Availability Zone contains one or more data centers that house the servers and storage devices that run AWS services. Availability Zones enable users to design and operate fault-tolerant and high-availability applications on AWS. AWS Global InfrastructureAWS Certified Cloud Practitioner - aws.amazon.com"
+    },
+    {
+        "id": 263,
+        "question": "Which AWS Support plan assigns an AWS concierge agent to a company's account?",
+        "options": {
+            "A": "AWS Basic Support",
+            "B": "AWS Developer Support",
+            "C": "AWS Business Support",
+            "D": "AWS Enterprise Support"
+        },
+        "correct_answers": [
+            "D"
+        ],
+        "type": "single",
+        "explanation": " AWS Enterprise Support is the AWS Support plan that assigns an AWS concierge agent to a company’s account. AWS Enterprise Support is the highest level of support that AWS offers, and it provides the most comprehensive and personalized assistance. An AWS concierge agent is a dedicated technical account manager who acts as a single point of contact for the company and helps to optimize the AWS environment, resolve issues, and access AWS experts. For more information, see [AWS Support Plans] and [AWS Concierge Support]."
+    },
+    {
+        "id": 264,
+        "question": "A cloud practitioner is analyzing Amazon EC2 instance performance and usage to provide recommendations for potential cost savings. Which cloud concept does this analysis demonstrate?",
+        "options": {
+            "A": "Auto scaling",
+            "B": "Rightsizing",
+            "C": "Load balancing",
+            "D": "High availability"
+        },
+        "correct_answers": [
+            "B"
+        ],
+        "type": "single",
+        "explanation": " Rightsizing is the cloud concept that this analysis demonstrates. Rightsizing is the process of optimizing the performance and cost of your AWS resources by selecting the most appropriate type, size, and configuration based on your workload requirements and usage patterns. Rightsizing can help you achieve potential cost savings by reducing the over-provisioning or under-utilization of your resources. You can use various AWS tools and services, such as AWS Cost Explorer, AWS Compute Optimizer, and AWS Trusted Advisor, to analyze your resource utilization and performance metrics, and receive recommendations for rightsizing."
+    },
+    {
+        "id": 265,
+        "question": "A company is hosting a web application in a Docker container on Amazon EC2. AWS is responsible for which of the following tasks?",
+        "options": {
+            "A": "Scaling the web application and services developed with Docker",
+            "B": "Provisioning or scheduling containers to run on clusters and maintain their availability",
+            "C": "Performing hardware maintenance in the AWS facilities that run the AWS Cloud",
+            "D": "Managing the guest operating system, including updates and security patches"
+        },
+        "correct_answers": [
+            "C"
+        ],
+        "type": "single",
+        "explanation": " AWS is responsible for performing hardware maintenance in the AWS facilities that run the AWS Cloud. This is part of the shared responsibility model, where AWS is responsible for the security of the cloud, and the customer is responsible for security in the cloud. AWS is also responsible for the global infrastructure that runs all of the services offered in the AWS Cloud, including the hardware, software, networking, and facilities that run AWS Cloud services3. The customer is responsible for the guest operating system, including updates and security patches, as well as the web application and services developed with Docker4."
+    },
+    {
+        "id": 266,
+        "question": "Which AWS service or feature is used to send both text and email messages from distributed applications?",
+        "options": {
+            "A": "Amazon Simple Notification Service (Amazon SNS)",
+            "B": "Amazon Simple Email Service (Amazon SES)",
+            "C": "Amazon CloudWatch alerts",
+            "D": "Amazon Simple Queue Service (Amazon SQS)"
+        },
+        "correct_answers": [
+            "A"
+        ],
+        "type": "single",
+        "explanation": " Amazon Simple Notification Service (Amazon SNS) is the AWS service or feature that is used to send both text and email messages from distributed applications. Amazon SNS is a fully managed pub/sub messaging service that enables the user to send messages to multiple subscribers or endpoints, such as email addresses, phone numbers, HTTP endpoints, AWS Lambda functions, and more. Amazon SNS can be used to send notifications, alerts, confirmations, and reminders from applications to users or other applications."
     }
 ]

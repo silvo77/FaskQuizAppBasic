@@ -2,11 +2,12 @@ import csv
 from flask import Flask, render_template, request
 import json
 import random
+import ast
 
 app = Flask(__name__)
 
 def load_questions():
-    with open('questions.json') as f:
+    with open('questions.json', encoding="utf8") as f:
         return json.load(f)
 
 def nl2br(value):
@@ -19,7 +20,7 @@ app.jinja_env.filters['nl2br'] = nl2br
 @app.route('/', methods=['GET'])
 def quiz():
     questions = load_questions()
-    subset_size = 5 if len(questions) >= 5 else len(questions)
+    subset_size = 65 if len(questions) >= 5 else len(questions)
     quiz_questions = random.sample(questions, subset_size)
     return render_template('quiz.html', questions=quiz_questions)
 
@@ -36,6 +37,7 @@ def submit():
         user_answer = request.form.getlist("response_" + qid)
         answer_text = ", ".join(user_answer) if user_answer else "No Answer"
         correct_text = ", ".join(q["correct_answers"])
+        explanation = q.get("explanation")
         
         is_correct = set(user_answer) == set(q["correct_answers"])
         if is_correct:
@@ -46,7 +48,8 @@ def submit():
                 "id": qid,
                 "question": q["question"],
                 "user_answer": answer_text,
-                "correct_answer": correct_text
+                "correct_answer": correct_text,
+                "explanation": explanation
             })
         
         result = {
@@ -54,7 +57,8 @@ def submit():
             "id": qid,
             "question": q["question"],
             "user_answer": answer_text,
-            "correct_answer": correct_text
+            "correct_answer": correct_text,
+            "explanation": explanation
         }
         results.append(result)
         
@@ -67,16 +71,14 @@ def submit():
 @app.route('/save_results', methods=['POST'])
 def save_results():
     incorrect_answers_string = request.form.get('incorrect_answers')
-    json_acceptable_string = incorrect_answers_string.replace("'", "\"")
-    print(f'incorrect_answers {json_acceptable_string}')
-    incorrect_answers = json.loads(json_acceptable_string)
+    incorrect_answers_list = ast.literal_eval(incorrect_answers_string)
     
     
-    if incorrect_answers:
+    if len(incorrect_answers_list)>0:
         with open('my_errors.csv', 'a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            for answer in incorrect_answers:
-                writer.writerow([answer['number'],answer['id'],answer['user_answer'],answer['correct_answer'],answer['question']])
+            for answer in incorrect_answers_list:
+                writer.writerow([answer['id'],answer['user_answer'],answer['correct_answer'],answer['question']])
     return 'Results saved successfully!'
 
 if __name__ == '__main__':

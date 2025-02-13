@@ -31,6 +31,7 @@
             <th>Question</th>
             <th>My Answer</th>
             <th>Correct Answer</th>
+            <th>Explanation</th>
         </tr>
         {% for ia in incorrect_answers %}
         <tr>
@@ -39,6 +40,7 @@
             <td>{{ ia.question | nl2br | safe }}</td>
             <td>{{ ia.user_answer }}</td>
             <td>{{ ia.correct_answer }}</td>
+            <td>{{ ia.explanation }}</td>
         </tr>
         {% endfor %}
     </table>
@@ -56,6 +58,7 @@
             <th>Question</th>
             <th>My Answer</th>
             <th>Correct Answer</th>
+            <th>Explanation</th>
         </tr>
         {% for d in doubts %}
         <tr>
@@ -64,6 +67,7 @@
             <td>{{ d.question | nl2br | safe }}</td>
             <td>{{ d.user_answer }}</td>
             <td>{{ d.correct_answer }}</td>
+            <td>{{ d.explanation }}</td>
         </tr>
         {% endfor %}
     </table>
