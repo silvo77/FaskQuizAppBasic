@@ -20,28 +20,36 @@
     
     <!-- Display Score -->
     <h2>Your Score: {{ score }} out of {{ total_questions }}</h2>
+    <h3>Errors: {{ total_questions - score}}</h3>
+    <h3>Succes rate: {{(score / total_questions * 100)|round(2,'floor')}} %</h3>
     
     <!-- Incorrectly Answered Questions -->
     {% if incorrect_answers %}
     <h2>Incorrectly Answered Questions</h2>
     <table>
         <tr>
+            <th>#</th>
             <th>Question Number</th>
             <th>Question ID</th>
             <th>Question</th>
+            <th>Options</th>
             <th>My Answer</th>
             <th>Correct Answer</th>
             <th>Explanation</th>
         </tr>
+        {% set ns = namespace(counter=1) %}
         {% for ia in incorrect_answers %}
         <tr>
+            <td>{{ ns.counter }}</td>
             <td>{{ ia.number }}</td>
             <td>{{ ia.id }}</td>
             <td>{{ ia.question | nl2br | safe }}</td>
+            <td></td>
             <td>{{ ia.user_answer }}</td>
             <td>{{ ia.correct_answer }}</td>
             <td>{{ ia.explanation }}</td>
         </tr>
+        {% set ns.counter = ns.counter + 1 %}
         {% endfor %}
     </table>
     {% else %}
@@ -50,25 +58,31 @@
     
     <!-- Questions with Doubts -->
     {% if doubts %}
+    {% set ns = namespace(counter=1) %}
     <h2>Questions with Doubts</h2>
     <table>
         <tr>
+            <th>#</th>
             <th>Question Number</th>
             <th>Question ID</th>
             <th>Question</th>
+            <th>Options</th>
             <th>My Answer</th>
             <th>Correct Answer</th>
             <th>Explanation</th>
         </tr>
         {% for d in doubts %}
         <tr>
+            <td>{{ ns.counter }}</td>
             <td>{{ d.number }}</td>
             <td>{{ d.id }}</td>
             <td>{{ d.question | nl2br | safe }}</td>
+            <td></td>
             <td>{{ d.user_answer }}</td>
             <td>{{ d.correct_answer }}</td>
             <td>{{ d.explanation }}</td>
         </tr>
+        {% set ns = namespace(counter=1) %}
         {% endfor %}
     </table>
     {% else %}

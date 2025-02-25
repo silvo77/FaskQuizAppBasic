@@ -632,20 +632,6 @@
         "id": 44
     },
     {
-        "question": "Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?",
-        "options": {
-            "A": "Data architecture",
-            "B": "Event management",
-            "C": "Cloud fluency",
-            "D": "Strategic partnership"
-        },
-        "correct_answers": [
-            "C"
-        ],
-        "type": "single",
-        "id": 45
-    },
-    {
         "question": "A company wants to make an upfront commitment for continued use of its production Amazon EC2 instances in exchange for a reduced overall cost.\nWhich pricing options meet these requirements with the LOWEST cost? (Choose two.)",
         "options": {
             "A": "Spot Instances",
@@ -744,20 +730,6 @@
         ],
         "type": "single",
         "id": 52
-    },
-    {
-        "question": "Which AWS service is a cloud security posture management (CSPM) service that aggregates alerts from various AWS services and partner products in a standardized format?",
-        "options": {
-            "A": "AWS Security Hub",
-            "B": "AWS Trusted Advisor",
-            "C": "Amazon EventBridge",
-            "D": "Amazon GuardDuty"
-        },
-        "correct_answers": [
-            "A"
-        ],
-        "type": "single",
-        "id": 53
     },
     {
         "question": "Which AWS service is always provided at no charge?",

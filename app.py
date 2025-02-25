@@ -3,11 +3,12 @@ from flask import Flask, render_template, request,redirect,url_for
 import json
 import random
 import ast
+import os
 
 app = Flask(__name__)
 
-def load_questions():
-    with open('questions.json', encoding="utf8") as f:
+def load_questions(jsonfile):
+    with open(jsonfile, encoding="utf8") as f:
         return json.load(f)
 
 def nl2br(value):
@@ -19,17 +20,20 @@ app.jinja_env.filters['nl2br'] = nl2br
 
 @app.route('/', methods=['GET', 'POST'])
 def configure_quiz():
+    json_files = [f for f in os.listdir('.') if f.endswith('.json')]
     if request.method == 'POST':
+        jsonfile = request.form.get('json_file')
         max_questions = int(request.form.get('max_questions'))
         selection_type = request.form.get('selection_type')
         search_text = request.form.get('search_text', '').lower()
-        return redirect(url_for('quiz', max_questions=max_questions, selection_type=selection_type, search_text=search_text))
-    return render_template('index.html')
+        return redirect(url_for('quiz', jsonfile=jsonfile, max_questions=max_questions, selection_type=selection_type, search_text=search_text))
+    return render_template('index.html', json_files=json_files)
 
 
 @app.route('/quiz', methods=['GET'])
 def quiz():
-    questions = load_questions()
+    jsonfile = request.args.get('jsonfile', 'questions.json')
+    questions = load_questions(jsonfile)
     max_questions = int(request.args.get('max_questions', 5))
     selection_type = request.args.get('selection_type', 'random')
     search_text = request.args.get('search_text', '').lower()
