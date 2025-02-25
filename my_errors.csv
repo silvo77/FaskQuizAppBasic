@@ -16,3 +16,70 @@ Question ID,My Answer,Correct Answer,Question
 45,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
 196,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
 216,"D, E","A, C","A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which tasks should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)"
+436,B,C,A company needs a central user portal so that users can log in to third-party business applications that support Security Assertion Markup Language (SAML) 2.0.Which AWS service will meet this requirement?
+361,D,C,Which AWS service or tool can be used to set up a firewall to control traffic going into and coming out of an Amazon VPC subnet?
+492,"A, C","A, D",A company is hosting an application in the AWS Cloud. The company wants to verify that underlying AWS services and general AWS infrastructure are operating normally.Which combination of AWS services can the company use to gather the required information? (Choose two.)
+490,C,D,A company wants a customized assessment of its current on-premises environment. The company wants to understand its projected running costs in the AWS Cloud.Which AWS service or tool will meet these requirements?
+531,C,A,How does the AWS Enterprise Support Concierge team help users?
+313,D,C,A company wants to migrate its on-premises relational databases to the AWS Cloud. The company wants to use infrastructure as close to its current geographical location as possible.Which AWS service or resource should the company use to select its Amazon RDS deployment area?
+158,B,C,"A user wants to securely automate the management and rotation of credentials that are shared between applications, while spending the least amount of time on managing tasks.
+Which AWS service or feature can be used to accomplish this?"
+181,B,C,"A team of researchers is going to collect data at remote locations around the world Many locations do not have internet connectivity. The team needs to capture the data in the field, and transfer it to the AWS Cloud later Which AWS service will support these requirements?"
+195,A,D,A company has migrated its workloads to AWS. The company wants to adopt AWS at scale and operate more efficiently and securely. Which AWS service or framework should the company use for operational support?
+120,B,A,"A company wants to design a centralized storage system to manage the configuration data and passwords for its critical business applications.
+Which AWS service or capability will meet these requirements MOST cost-effectively?"
+137,"A, B","C, D",Which options are AWS Cloud Adoption Framework (AWS CAF) security perspective capabilities? (Choose two.)
+172,C,A,Which AWS service is a cloud security posture management (CSPM) service that aggregates alerts from various AWS services and partner products in a standardized format?
+258,A,C,A company wants to access a report about the estimated environmental impact of the company's AWS usage. Which AWS service or feature should the company use to meet this requirement?
+216,"C, D","A, C","A company is planning to migrate to the AWS Cloud. The company is conducting organizational transformation and wants to become more responsive to customer inquiries and feedback. Which tasks should the company perform to meet these requirements, according to the AWS Cloud Adoption Framework (AWS CAF)? (Select TWO.)"
+191,"A, F","A, B","Which tasks are customer responsibilities, according to the AWS shared responsibility model? (Select TWO.)"
+196,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
+50,B,C,Which option is a benefit of the economies of scale based on the advantages of cloud computing?
+53,C,A,Which AWS service is a cloud security posture management (CSPM) service that aggregates alerts from various AWS services and partner products in a standardized format?
+187,C,"C, E",Which AWS services or features give users the ability to create a network connection between two VPCs? (Select TWO.)
+71,A,D,"A company wants to assess its operational readiness. It also wants to identify and mitigate any operational risks ahead of a new product launch.
+Which AWS Support plan offers guidance and support for this kind of event at no additional charge?"
+95,C,D,Which AWS service or tool can be used to set up a firewall to control traffic going into and coming out of an Amazon VPC subnet?
+218,B,D,Which perspective in the AWS Cloud Adoption Framework (AWS CAF) includes a capability for well-designed data and analytics architecture?
+113,C,B,"A company wants an AWS service to provide product recommendations based on its customer data.
+Which AWS service will meet this requirement?"
+192,B,D,Which AWS service provides a single location to track the progress of application migrations?
+255,C,A,Which design principle is included in the operational excellence pillar of the AWS Well- Architected Framework?
+65,B,A,"A company wants to monitor for misconfigured security groups that are allowing unrestricted access to specific ports.
+Which AWS service will meet this requirement?"
+247,D,A,"Which aspect of security is the customer's responsibility, according to the AWS shared responsibility model?"
+182,"A, D","B, D",A company wants to launch its web application in a second AWS Region. The company needs to determine which services must be regionally configured for this launch. Which AWS services can be configured at the Region level? (Select TWO.)
+110,C,D,"A company wants to migrate its NFS on-premises workload to AWS.
+Which AWS Storage Gateway type should the company use to meet this requirement?"
+26,D,C,"A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes.
+Which AWS service or tool will meet this requirement?"
+231,B,C,"A customer runs an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. For how much time will the customer be billed?"
+170,C,B,"A company needs a central user portal so that users can log in to third-party business applications that support Security Assertion Markup Language (SAML) 2.0.
+Which AWS service will meet this requirement?"
+208,"B, C","C, D",A company is building an application on AWS. The application needs to comply with credit card regulatory requirements. The company needs proof that the AWS services and deployment are in compliance. Which actions should the company take to meet these requirements? (Select TWO.)
+98,A,B,"A company wants to grant users in one AWS account access to resources in another AWS account. The users do not currently have permission to access the resources.
+Which AWS service will meet this requirement?"
+15,A,B,"A global company wants to migrate its third-party applications to the AWS Cloud. The company wants help from a global team of experts to complete the migration faster and more reliably in accordance with AWS internal best practices.
+Which AWS service or resource will meet these requirements?"
+45,D,C,Which AWS Cloud Adoption Framework (AWS CAF) capability belongs to the people perspective?
+249,"B, D","A, B",A company wants to implement controls (guardrails) in a newly created AWS Control Tower landing zone. Which AWS services or features can the company use to create and define these controls (guardrails)? (Select TWO.)
+64,"C, D","B, C","A company wants to provide managed Windows virtual desktops and applications to its remote employees over secure network connections.
+Which AWS services can the company use to meet these requirements? (Choose two.)"
+205,"A, B","A, C",Which options are AWS Cloud Adoption Framework (AWS CAF) people perspective capabilities? (Select TWO.)
+205,"A, B","A, C",Which options are AWS Cloud Adoption Framework (AWS CAF) people perspective capabilities? (Select TWO.)
+170,C,B,"A company needs a central user portal so that users can log in to third-party business applications that support Security Assertion Markup Language (SAML) 2.0.
+Which AWS service will meet this requirement?"
+231,B,C,"A customer runs an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. For how much time will the customer be billed?"
+195,B,D,A company has migrated its workloads to AWS. The company wants to adopt AWS at scale and operate more efficiently and securely. Which AWS service or framework should the company use for operational support?
+208,"B, C","C, D",A company is building an application on AWS. The application needs to comply with credit card regulatory requirements. The company needs proof that the AWS services and deployment are in compliance. Which actions should the company take to meet these requirements? (Select TWO.)
+249,"B, D","A, B",A company wants to implement controls (guardrails) in a newly created AWS Control Tower landing zone. Which AWS services or features can the company use to create and define these controls (guardrails)? (Select TWO.)
+255,B,A,Which design principle is included in the operational excellence pillar of the AWS Well- Architected Framework?
+182,"A, E","B, D",A company wants to launch its web application in a second AWS Region. The company needs to determine which services must be regionally configured for this launch. Which AWS services can be configured at the Region level? (Select TWO.)
+178,B,A,A company processes personally identifiable information (Pll) and must keep data in the country where it was generated. The company wants to use Amazon EC2 instances for these workloads. Which AWS service will meet these requirements?
+15,A,B,"A global company wants to migrate its third-party applications to the AWS Cloud. The company wants help from a global team of experts to complete the migration faster and more reliably in accordance with AWS internal best practices.
+Which AWS service or resource will meet these requirements?"
+98,A,B,"A company wants to grant users in one AWS account access to resources in another AWS account. The users do not currently have permission to access the resources.
+Which AWS service will meet this requirement?"
+64,"C, D","B, C","A company wants to provide managed Windows virtual desktops and applications to its remote employees over secure network connections.
+Which AWS services can the company use to meet these requirements? (Choose two.)"
+175,C,D,A company is planning to migrate to the AWS Cloud and wants to become more responsive to customer inquiries and feedback. The company wants to focus on organizational transformation. A company wants to give its customers the ability to view specific data that is hosted in Amazon S3 buckets. The company wants to keep control over the full datasets that the company shares with the customers. Which S3 feature will meet these requirements?

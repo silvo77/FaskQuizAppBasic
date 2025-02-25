@@ -36,6 +36,10 @@ def quiz():
 
     if selection_type == 'text' and search_text:
         filtered_questions = [q for q in questions if search_text in q['question'].lower() or any(search_text in ans.lower() for ans in q['options'].values())]
+    elif selection_type == 'list' and search_text:
+        ids_list = search_text.split(',')
+        ids_list = [id.strip() for id in ids_list]
+        filtered_questions = [q for q in questions if str(q['id']) in ids_list]
     else:
         filtered_questions = questions
 

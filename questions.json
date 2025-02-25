@@ -2420,7 +2420,7 @@
             "D": "AWS CLI"
         },
         "correct_answers": [
-            "B"
+            "C"
         ],
         "type": "single",
         "id": 170
@@ -2603,8 +2603,8 @@
             "E": "Amazon DynamoDB"
         },
         "correct_answers": [
-            "B",
-            "D"
+            "A",
+            "E"
         ],
         "type": "multiple",
         "explanation": " Amazon Route 53 and AWS WAF are AWS services that can be configured at the Region level. Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service that lets you register domain names, route traffic to resources, and check the health of your resources. AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. Amazon EC2, Amazon CloudFront, and Amazon DynamoDB are AWS services that can be configured at the global level or the Availability Zone level ."
@@ -3364,7 +3364,7 @@
             "D": "4 hours"
         },
         "correct_answers": [
-            "C"
+            "B"
         ],
         "type": "single",
         "explanation": " Amazon EC2 usage is calculated by either the hour or the second based on the size of the instance, operating system, and the AWS Region where the instances are launched. Pricing is per instance-hour consumed for each instance, from the time an instance is launched until it’s terminated or stopped. Each partial instance-hour consumed is billed per-second for Linux instances and as a full hour for all other instance types1. Therefore, the customer will be billed for 3 hours and 6 minutes for running an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. References: Understand Amazon EC2 instance- hours billing"
@@ -3476,7 +3476,7 @@
     },
     {
         "id": 239,
-        "question": "A company is running an application on AWS. The company wants to identify and prevent the accidental Which AWS service or feature will meet these requirements?",
+        "question": "A company is running an application on AWS. The company wants to identify and prevent the accidental download of malware. Which AWS service or feature will meet these requirements?",
         "options": {
             "A": "Amazon GuardDuty",
             "B": "Network ACL",
@@ -3730,7 +3730,7 @@
             "D": "Optimize costs."
         },
         "correct_answers": [
-            "A"
+            "B"
         ],
         "type": "single",
         "explanation": " Create annotated documentation is the design principle that is included in the operational excellence pillar of the AWS Well-Architected Framework. According to the AWS Well-Architected Framework whitepaper, creating annotated documentation means \"documenting your workload so that the team understands the architecture, how to operate the workload, and how the workload delivers value to customers.\"3 Anticipate failure, ensure performance efficiency, and optimize costs are design principles that belong to other pillars of the AWS Well-Architected Framework, such as reliability, performance efficiency, and cost optimization."
